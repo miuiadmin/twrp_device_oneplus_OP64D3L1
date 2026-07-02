@@ -1,0 +1,17 @@
+# Charger
+ro.charger.enable_suspend=true
+
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
+# USB in recovery
+persist.sys.usb.config=adb
+
+# Device identity
+ro.product.brand=OnePlus
+ro.product.device=OP64D3L1
+ro.product.manufacturer=OnePlus
+ro.product.model=PLY110
+ro.product.name=PLY110
+ro.product.board=volcano
+ro.board.platform=volcano
