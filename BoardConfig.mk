@@ -18,8 +18,8 @@ BUILD_BROKEN_PLUGIN_VALIDATION      := soong-libaosprecovery_defaults soong-libg
 TARGET_ARCH                 := arm64
 TARGET_ARCH_VARIANT         := armv8-a
 TARGET_CPU_ABI              := arm64-v8a
-TARGET_CPU_VARIANT          := kryo300
-TARGET_CPU_VARIANT_RUNTIME  := kryo300
+TARGET_CPU_VARIANT          := kryo
+TARGET_CPU_VARIANT_RUNTIME  := kryo
 TARGET_USES_64_BIT_BINDER   := true
 
 # A/B
