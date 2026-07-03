@@ -1,0 +1,11 @@
+diff --git a/bootable/recovery/gui/gui.cpp b/bootable/recovery/gui/gui.cpp
+--- a/bootable/recovery/gui/gui.cpp
++++ b/bootable/recovery/gui/gui.cpp
+@@ -543,3 +543,4 @@ static void loopTimer(int input_timeout_ms)
+-		// This is really 2 or TW_FRAMERATE times per second
+-		// As long as we get events, increase the timeout so we can catch up with input
+-		long timeout = got_event ? 500000000 : (1.0 / TW_FRAMERATE * 1000000000);
++		// Keep input handling tied to the render cadence. A 500ms event window
++		// makes modern high-rate touch panels feel responsive to finger motion
++		// while delaying clicks and page updates.
++		long timeout = got_event ? (1.0 / TW_FRAMERATE * 1000000000) : (1.0 / TW_FRAMERATE * 1000000000);

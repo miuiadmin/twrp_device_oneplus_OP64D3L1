@@ -33,5 +33,4 @@
 /efsc           emmc    /dev/block/bootdevice/by-name/fsc                               flags=backup=1;subpartitionof=/efs1
 /efsg           emmc    /dev/block/bootdevice/by-name/fsg                               flags=backup=1;subpartitionof=/efs1
 
-# Removable storage
-/usbstorage     vfat    /dev/block/sdg1                              /dev/block/sdg      flags=fsflags=utf8;display="USB Storage";storage;wipeingui;removable
+# Removable storage disabled until the exact OP64D3L1 USB block path is mapped.

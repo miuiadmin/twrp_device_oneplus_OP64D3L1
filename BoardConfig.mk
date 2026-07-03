@@ -129,10 +129,9 @@ TW_INCLUDE_ZSTD               := true
 
 # TWRP display
 TW_BRIGHTNESS_PATH      := /sys/class/backlight/panel0-backlight/brightness
-TW_DEFAULT_BRIGHTNESS   := 200
-TW_FRAMERATE            := 120
-TW_MAX_BRIGHTNESS       := 2047
-TW_SCREEN_BLANK_ON_BOOT := true
+TW_DEFAULT_BRIGHTNESS   := 1638
+TW_FRAMERATE            := 60
+TW_MAX_BRIGHTNESS       := 4094
 TW_THEME                := portrait_hdpi
 
 # TWRP file system
@@ -143,6 +142,7 @@ TW_INCLUDE_FUSE_EXFAT       := true
 TW_INCLUDE_FUSE_NTFS        := true
 TW_INCLUDE_NTFS_3G          := true
 TW_NO_EXFAT_FUSE            := true
+TW_DEFAULT_LANGUAGE         := zh_CN
 
 # Version
 PLATFORM_VERSION                := 99.87.36
@@ -155,7 +155,7 @@ TW_DEVICE_VERSION               := OnePlus_Turbo_6V_nodecrypt
 BOARD_AVB_ENABLE := true
 
 # Vibrator
-TW_SUPPORT_INPUT_AIDL_HAPTICS := true
+TW_NO_HAPTICS := true
 
 # Other TWRP configurations
 TARGET_RECOVERY_QCOM_RTC_FIX            := true
@@ -163,8 +163,9 @@ TW_CUSTOM_CPU_TEMP_PATH                 := "/sys/class/thermal/thermal_zone45/te
 TW_EXCLUDE_APEX                         := true
 TW_EXCLUDE_DEFAULT_USB_INIT             := true
 TW_EXTRA_LANGUAGES                      := true
-TW_LOAD_VENDOR_MODULES                  := "adsp_loader_dlkm.ko oplus_chg_v2.ko stm_st54se_gpio.ko nxp-nci.ko"
+TW_NO_SCREEN_BLANK                      := true
+TW_NO_SCREEN_TIMEOUT                    := true
+TW_LOAD_VENDOR_MODULES                  := "adsp_loader_dlkm.ko stm_st54se_gpio.ko nxp-nci.ko"
 TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI      := true
 TW_NO_NETWORK                           := true
-TW_NO_SCREEN_BLANK                      := true
 TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID  := true

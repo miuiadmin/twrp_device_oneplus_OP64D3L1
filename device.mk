@@ -38,7 +38,9 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/recovery/root/system/etc/twrp.flags:recovery/root/system/etc/twrp.flags \
     $(DEVICE_PATH)/recovery/root/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
     $(DEVICE_PATH)/recovery/root/init.recovery.usb.rc:recovery/root/init.recovery.usb.rc \
-    $(DEVICE_PATH)/recovery/root/ueventd.qcom.rc:recovery/root/ueventd.qcom.rc
+    $(DEVICE_PATH)/recovery/root/ueventd.qcom.rc:recovery/root/ueventd.qcom.rc \
+    $(DEVICE_PATH)/recovery/root/system/bin/twrp-touch-hal-init.sh:recovery/root/system/bin/twrp-touch-hal-init.sh \
+    $(DEVICE_PATH)/recovery/root/vendor/manifest.xml:recovery/root/vendor/manifest.xml
 
 # USB in recovery
 PRODUCT_PROPERTY_OVERRIDES += \

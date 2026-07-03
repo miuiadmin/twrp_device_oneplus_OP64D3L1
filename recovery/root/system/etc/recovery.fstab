@@ -55,6 +55,5 @@ my_manifest     /my_manifest     erofs  ro                      wait,slotselect,
 /dev/block/bootdevice/by-name/modem      /vendor/firmware_mnt   vfat  ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0  wait,slotselect
 /dev/block/bootdevice/by-name/dsp        /vendor/dsp            ext4  ro,nosuid,nodev,barrier=1  wait,slotselect
 
-# Removable storage
-/devices/platform/soc/8804000.sdhci/mmc_host*          /external_sd  vfat  nosuid,nodev  wait,voldmanaged=sdcard1:auto
-/devices/platform/soc/*.ssusb/*.dwc3/xhci-hcd.*.auto*  /usb_otg      vfat  nosuid,nodev  wait,voldmanaged=usbotg:auto
+# Removable storage is disabled for now. The generic voldmanaged USB wildcard
+# mis-detects internal UFS LUNs as /usb_otg-* entries and makes the UI sluggish.

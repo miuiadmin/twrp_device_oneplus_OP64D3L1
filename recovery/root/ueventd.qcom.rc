@@ -430,6 +430,12 @@ subsystem mem_buf_vm
 #ImproveTouch device
 /dev/hbtp_input           0660   system     system
 /dev/hbtp_vm              0660   system     system
+/dev/hbp_core            0660   system     system
+/dev/hbp0                0660   system     system
+/dev/hbp1                0660   system     system
+/dev/tcm0                0660   system     system
+/dev/tcm_hbp0            0660   system     system
+/dev/qcom,cp_touch       0660   system     system
 
 # LegacyTouch device
 /sys/kernel/qts/primary/trusted_touch*    0660   system     system

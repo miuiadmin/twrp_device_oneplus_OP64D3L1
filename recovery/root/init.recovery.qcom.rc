@@ -25,9 +25,77 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+on early-init
+    write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
+
 on init
-    write /sys/class/backlight/panel0-backlight/brightness 200
+    write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
+    write /sys/class/backlight/panel0-backlight/bl_power 0
+    write /sys/class/backlight/panel0-backlight/brightness 1638
     setprop sys.usb.configfs 1
+
+on boot
+    write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
+    write /sys/class/backlight/panel0-backlight/bl_power 0
+    write /sys/class/backlight/panel0-backlight/brightness 1638
+    mkdir /data/vendor 0771 system system
+    mkdir /data/vendor/touch 0771 system system
+    mkdir /data/vendor/touch/test 0771 system system
+    mkdir /data/vendor/touch/record 0771 system system
+    mkdir /data/vendor/touch/log 0771 system system
+    mkdir /data/vendor/touch/simulate 0771 system system
+    mkdir /data/vendor/touch/upload 0771 system system
+    mkdir /data/vendor/touchconfig 0777 system system
+    mkdir /odm 0755 root root
+    wait /dev/block/mapper/odm${ro.boot.slot_suffix} 10
+    mount erofs /dev/block/mapper/odm${ro.boot.slot_suffix} /odm ro
+    wait /sys/devices/platform/soc/soc:hbp@0/irq_enable 10
+    chown system system /dev/hbp_core
+    chown system system /dev/hbp0
+    chown system system /dev/hbp1
+    chown system system /dev/tcm0
+    chown system system /dev/qcom,cp_touch
+    chmod 0660 /dev/hbp_core
+    chmod 0660 /dev/hbp0
+    chmod 0660 /dev/hbp1
+    chmod 0660 /dev/tcm0
+    chmod 0660 /dev/qcom,cp_touch
+    symlink /dev/tcm0 /dev/tcm_hbp0
+    chown system system /dev/tcm_hbp0
+    chmod 0660 /dev/tcm_hbp0
+    write /sys/devices/platform/soc/soc:hbp@0/debug_level 2
+    write /sys/devices/platform/soc/soc:hbp@0/irq_enable 0,1
+    start twrp_touch_hal_init
+
+service twrp_touch_hal_init /system/bin/sh /system/bin/twrp-touch-hal-init.sh
+    class core
+    disabled
+    oneshot
+    user root
+    group root system input
+    seclabel u:r:recovery:s0
+
+on property:sys.twrp_touch_ready=1
+    mkdir /odm 0755 root root
+    mount erofs /dev/block/mapper/odm${ro.boot.slot_suffix} /odm ro
+    wait /odm/bin/hw/vendor-oplus-hardware-touch-V2-hbp5-service 5
+    wait /odm/firmware/tp/prado/vnd_touch_project_config.xml 5
+    start vendor.touch-aidl-2
+    write /sys/devices/platform/soc/soc:hbp@0/irq_enable 0,1
+    stop charger
+    stop logd
+
+service vendor.touch-aidl-2 /odm/bin/hw/vendor-oplus-hardware-touch-V2-hbp5-service
+    class hal
+    disabled
+    oneshot
+    capabilities SYS_NICE
+    user root
+    group root system everybody gps radio inet sdcard_r sdcard_rw input
+    socket hidl2touchdaemon_client dgram 0660 root inet
+    socket hidl2touchdaemon_server dgram 0660 root inet
+    interface aidl vendor.oplus.hardware.touch.IOplusTouch/default
+    seclabel u:r:recovery:s0
 
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
