@@ -33,6 +33,10 @@ on init
     write /sys/class/backlight/panel0-backlight/bl_power 0
     write /sys/class/backlight/panel0-backlight/brightness 1638
     setprop sys.usb.configfs 1
+    setprop prepdecrypt.setpatch true
+    start vendor.qseecomd
+    start vendor.keymint-qti
+    start vendor.gatekeeper_default
 
 on boot
     write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1

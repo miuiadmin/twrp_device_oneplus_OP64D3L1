@@ -62,10 +62,14 @@ TARGET_OTA_ASSERT_DEVICE        := OP64D3L1,PLY110,pineapple
 QCOM_BOARD_PLATFORMS            += volcano
 
 # Crypto
-# OPlus Android 16 FBE/KeyMint currently hangs this target at the TWRP splash.
-# Keep metadata visible, but skip userdata decryption for the first bootable build.
+# Stock userdata uses FBE v2 with inline crypto, wrapped keys, and metadata
+# encryption stored under /metadata/vold/metadata_encryption.
 BOARD_USES_METADATA_PARTITION       := true
-TW_EXCLUDE_CRYPTO                   := true
+TW_INCLUDE_CRYPTO                   := true
+TW_INCLUDE_FBE                      := true
+TW_INCLUDE_FBE_METADATA_DECRYPT     := true
+TW_USE_FSCRYPT_POLICY               := 2
+TW_INCLUDE_OMAPI                    := true
 
 # Debug
 TARGET_USES_LOGD                := true
@@ -149,7 +153,7 @@ PLATFORM_VERSION                := 99.87.36
 PLATFORM_VERSION_LAST_STABLE    := $(PLATFORM_VERSION)
 PLATFORM_SECURITY_PATCH         := 2099-12-31
 VENDOR_SECURITY_PATCH           := $(PLATFORM_SECURITY_PATCH)
-TW_DEVICE_VERSION               := OnePlus_Turbo_6V_nodecrypt
+TW_DEVICE_VERSION               := OnePlus_Turbo_6V_data_decrypt_test
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
