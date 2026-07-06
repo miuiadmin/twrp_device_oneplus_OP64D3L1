@@ -20,6 +20,7 @@
     </hal>
     <hal format="aidl">
         <name>android.hardware.gatekeeper</name>
+        <version>1</version>
         <fqname>IGatekeeper/default</fqname>
     </hal>
     <hal format="hidl">

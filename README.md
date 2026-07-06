@@ -19,6 +19,7 @@ Release 页面：[v0.0.1](https://github.com/miuiadmin/twrp_device_oneplus_OP64D
 
 | 文件 | 用途 | SHA256 |
 | --- | --- | --- |
+| [TWRP-3.7.1-16-OP64D3L1-2026-07-03-1915-data-decrypt-keystore-iface-v17.img](https://github.com/miuiadmin/twrp_device_oneplus_OP64D3L1/releases/download/v0.0.1/TWRP-3.7.1-16-OP64D3L1-2026-07-03-1915-data-decrypt-keystore-iface-v17.img) | `/data` 解密实验版 v17，补充 keystore2 AIDL interface 注册 | `f4476564ca4d5034ca4775b0555ec11d392d85e6000c06478c23c123ed702d5e` |
 | [TWRP-3.7.1-16-OP64D3L1-2026-07-03-143959-no-timeout-no-otg.img](https://github.com/miuiadmin/twrp_device_oneplus_OP64D3L1/releases/download/v0.0.1/TWRP-3.7.1-16-OP64D3L1-2026-07-03-143959-no-timeout-no-otg.img) | 已验证可用的 TWRP v0.0.1 | `293150a8d0e71c3213d6a70d7fdc982b423f679353081c73485ab76f2f83e0b3` |
 | [boot.img](https://github.com/miuiadmin/twrp_device_oneplus_OP64D3L1/releases/download/v0.0.1/boot.img) | 官方 boot 分区 | `44901063653fb1094cb758f255a08f96601dff6a7059f4c03fdbe2ea60e224d9` |
 | [vendor_boot.img](https://github.com/miuiadmin/twrp_device_oneplus_OP64D3L1/releases/download/v0.0.1/vendor_boot.img) | 官方 vendor_boot 分区 | `90a2fb3a065eea375b696ed81cf0659a28ffe77430d2c326f25b3940a6b8f70c` |
@@ -49,6 +50,12 @@ Release 页面：[v0.0.1](https://github.com/miuiadmin/twrp_device_oneplus_OP64D
 - 包含 TWRP GUI 输入延迟补丁：`patches/0001-twrp-gui-input-latency-frame-timeout.patch`。
 
 已知取舍：v0.0.1 暂时不启用 USB OTG 存储，后续确认 Turbo 6V 准确 USB 块设备路径后再恢复。
+
+## `/data` 解密实验版
+
+`TWRP-3.7.1-16-OP64D3L1-2026-07-03-1915-data-decrypt-keystore-iface-v17.img` 是基于 v0.0.1 继续排查 `/data` 解密的实验镜像。它加入 QCOM FBE/metadata decrypt 配置、KeyMint/Gatekeeper/QSEE 依赖、早期 `/odm` 挂载，以及 `keystore2` 的 `android.system.keystore2.IKeystoreService/default` AIDL interface 声明。
+
+该版本用于验证解密链路，不代表已经完整解决 `/data` 解密；需要稳定使用 recovery 时，优先使用上表中已验证的 `no-timeout-no-otg` 镜像。
 
 ## 构建 TWRP
 

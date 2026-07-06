@@ -1,8 +1,9 @@
 service vendor.gatekeeper_default /vendor/bin/hw/android.hardware.gatekeeper-service-qti
     class early_hal
     user system
-    group system
+    group system drmrpc
     disabled
+    interface aidl android.hardware.gatekeeper.IGatekeeper/default
     seclabel u:r:recovery:s0
 
 on property:vendor.gatekeeper.is_security_level_spu=0

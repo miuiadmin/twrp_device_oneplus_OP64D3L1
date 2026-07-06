@@ -65,11 +65,13 @@ QCOM_BOARD_PLATFORMS            += volcano
 # Stock userdata uses FBE v2 with inline crypto, wrapped keys, and metadata
 # encryption stored under /metadata/vold/metadata_encryption.
 BOARD_USES_METADATA_PARTITION       := true
+BOARD_USES_QCOM_FBE_DECRYPTION      := true
 TW_INCLUDE_CRYPTO                   := true
-TW_INCLUDE_FBE                      := true
+TW_INCLUDE_CRYPTO_FBE               := true
 TW_INCLUDE_FBE_METADATA_DECRYPT     := true
 TW_USE_FSCRYPT_POLICY               := 2
 TW_INCLUDE_OMAPI                    := true
+TW_FORCE_KEYMASTER_VER              := true
 
 # Debug
 TARGET_USES_LOGD                := true
@@ -80,6 +82,8 @@ RECOVERY_BINARY_SOURCE_FILES    += $(TARGET_OUT_EXECUTABLES)/debuggerd
 RECOVERY_BINARY_SOURCE_FILES    += $(TARGET_OUT_EXECUTABLES)/strace
 
 # File systems
+BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
+TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TW_USE_DMCTL               := true
 
@@ -121,6 +125,7 @@ TARGET_COPY_OUT_VENDOR          := vendor
 TARGET_RECOVERY_FSTAB                       := $(DEVICE_PATH)/recovery.fstab
 TARGET_RECOVERY_PIXEL_FORMAT                := RGBX_8888
 TW_INCLUDE_FASTBOOTD                        := true
+TW_SKIP_ADDITIONAL_FSTAB                    := true
 
 # Tool
 TW_ENABLE_ALL_PARTITION_TOOLS := true

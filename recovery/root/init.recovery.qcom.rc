@@ -27,6 +27,7 @@
 
 on early-init
     write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
+    rm /vendor/odm
 
 on init
     write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
@@ -34,9 +35,6 @@ on init
     write /sys/class/backlight/panel0-backlight/brightness 1638
     setprop sys.usb.configfs 1
     setprop prepdecrypt.setpatch true
-    start vendor.qseecomd
-    start vendor.keymint-qti
-    start vendor.gatekeeper_default
 
 on boot
     write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
@@ -53,6 +51,27 @@ on boot
     mkdir /odm 0755 root root
     wait /dev/block/mapper/odm${ro.boot.slot_suffix} 10
     mount erofs /dev/block/mapper/odm${ro.boot.slot_suffix} /odm ro
+    mkdir /mnt/vendor 0755 root system
+    mkdir /mnt/vendor/persist 0771 root system
+    wait /dev/block/by-name/persist 10
+    mount ext4 /dev/block/by-name/persist /mnt/vendor/persist noatime nosuid nodev
+    mkdir /mnt/vendor/persist/data 0770 system system
+    mkdir /vendor/firmware_mnt 0755 root root
+    wait /dev/block/by-name/modem${ro.boot.slot_suffix} 10
+    mount vfat /dev/block/by-name/modem${ro.boot.slot_suffix} /vendor/firmware_mnt ro
+    mkdir /vendor/dsp 0755 root root
+    wait /dev/block/by-name/dsp${ro.boot.slot_suffix} 10
+    mount ext4 /dev/block/by-name/dsp${ro.boot.slot_suffix} /vendor/dsp ro nosuid nodev
+    mkdir /data/vendor/tzstorage 0770 system system
+    chown root drmrpc /dev/smcinvoke
+    chmod 0660 /dev/smcinvoke
+    chown root drmrpc /dev/dma_heap/qcom,qseecom
+    chmod 0660 /dev/dma_heap/qcom,qseecom
+    chown root drmrpc /dev/dma_heap/qcom,qseecom-ta
+    chmod 0660 /dev/dma_heap/qcom,qseecom-ta
+    chown root drmrpc /dev/ufs-bsg0
+    chmod 0660 /dev/ufs-bsg0
+    start vendor.qseecomd
     wait /sys/devices/platform/soc/soc:hbp@0/irq_enable 10
     chown system system /dev/hbp_core
     chown system system /dev/hbp0
@@ -70,6 +89,14 @@ on boot
     write /sys/devices/platform/soc/soc:hbp@0/debug_level 2
     write /sys/devices/platform/soc/soc:hbp@0/irq_enable 0,1
     start twrp_touch_hal_init
+
+on property:init.svc.vendor.qseecomd=running
+    start vendor.keymint-qti
+    start vendor.gatekeeper_default
+
+on property:init.svc.vendor.keymint-qti=running
+    stop keystore2
+    start keystore2
 
 service twrp_touch_hal_init /system/bin/sh /system/bin/twrp-touch-hal-init.sh
     class core
@@ -110,3 +137,26 @@ on property:ro.boot.usbcontroller=*
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    mkdir /odm 0755 root root
+    wait /dev/block/mapper/odm${ro.boot.slot_suffix} 10
+    mount erofs /dev/block/mapper/odm${ro.boot.slot_suffix} /odm ro
+    mkdir /mnt/vendor 0755 root system
+    mkdir /mnt/vendor/persist 0771 root system
+    wait /dev/block/by-name/persist 10
+    mount ext4 /dev/block/by-name/persist /mnt/vendor/persist noatime nosuid nodev
+    mkdir /mnt/vendor/persist/data 0770 system system
+    mkdir /vendor/firmware_mnt 0755 root root
+    wait /dev/block/by-name/modem${ro.boot.slot_suffix} 10
+    mount vfat /dev/block/by-name/modem${ro.boot.slot_suffix} /vendor/firmware_mnt ro
+    mkdir /vendor/dsp 0755 root root
+    wait /dev/block/by-name/dsp${ro.boot.slot_suffix} 10
+    mount ext4 /dev/block/by-name/dsp${ro.boot.slot_suffix} /vendor/dsp ro nosuid nodev
+    chown root drmrpc /dev/smcinvoke
+    chmod 0660 /dev/smcinvoke
+    chown root drmrpc /dev/dma_heap/qcom,qseecom
+    chmod 0660 /dev/dma_heap/qcom,qseecom
+    chown root drmrpc /dev/dma_heap/qcom,qseecom-ta
+    chmod 0660 /dev/dma_heap/qcom,qseecom-ta
+    chown root drmrpc /dev/ufs-bsg0
+    chmod 0660 /dev/ufs-bsg0
+    start vendor.qseecomd

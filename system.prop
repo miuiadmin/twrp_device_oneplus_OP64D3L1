@@ -7,6 +7,10 @@ persist.sys.fuse.passthrough.enable=true
 # USB in recovery
 persist.sys.usb.config=adb
 
+# Gatekeeper
+vendor.gatekeeper.disable_spu=true
+vendor.gatekeeper.is_security_level_spu=0
+
 # Device identity
 ro.product.brand=OnePlus
 ro.product.device=OP64D3L1
@@ -15,3 +19,4 @@ ro.product.model=PLY110
 ro.product.name=PLY110
 ro.product.board=volcano
 ro.board.platform=volcano
+keymaster_ver=4.x
