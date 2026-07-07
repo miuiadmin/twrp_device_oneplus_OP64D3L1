@@ -19,6 +19,12 @@ Release 页面：[v0.0.1](https://github.com/miuiadmin/twrp_device_oneplus_OP64D
 
 | 文件 | 用途 | SHA256 |
 | --- | --- | --- |
+| [TWRP-3.7.1-16-OP64D3L1-2026-07-07-1049-data-decrypt-v23-late-keystore-stock-osver.img](https://github.com/miuiadmin/twrp_device_oneplus_OP64D3L1/releases/download/v0.0.1/TWRP-3.7.1-16-OP64D3L1-2026-07-07-1049-data-decrypt-v23-late-keystore-stock-osver.img) | `/data` 解密实验版 v23，组合延后 keystore2 和真实系统版本/补丁级别 | `be9203aaf04235383bff2995a3df8df06addb45925c48c3b42d01233b6d7082c` |
+| [TWRP-3.7.1-16-OP64D3L1-2026-07-07-1045-data-decrypt-v22-stock-osver-patchlevel.img](https://github.com/miuiadmin/twrp_device_oneplus_OP64D3L1/releases/download/v0.0.1/TWRP-3.7.1-16-OP64D3L1-2026-07-07-1045-data-decrypt-v22-stock-osver-patchlevel.img) | `/data` 解密实验版 v22，使用 Android 16 和 2026-06-01 安全补丁级别 | `52b78d8272952697c87aabe1e07e20ff41a0cdf9243217ccfe6f10f71f1807db` |
+| [TWRP-3.7.1-16-OP64D3L1-2026-07-07-1042-data-decrypt-v21-additional-fstab.img](https://github.com/miuiadmin/twrp_device_oneplus_OP64D3L1/releases/download/v0.0.1/TWRP-3.7.1-16-OP64D3L1-2026-07-07-1042-data-decrypt-v21-additional-fstab.img) | `/data` 解密实验版 v21，恢复 TWRP additional fstab processing | `d3f82bc53b62a839620b3737773a23ec55fe41619c951adf98a7055d6fd4f041` |
+| [TWRP-3.7.1-16-OP64D3L1-2026-07-07-1040-data-decrypt-v20-fstab-ice-wrappedkey.img](https://github.com/miuiadmin/twrp_device_oneplus_OP64D3L1/releases/download/v0.0.1/TWRP-3.7.1-16-OP64D3L1-2026-07-07-1040-data-decrypt-v20-fstab-ice-wrappedkey.img) | `/data` 解密实验版 v20，尝试旧式 `fileencryption=ice,wrappedkey` | `4caabc5ba43f29cf5e95e248851b499e055344a29ac7742c9cc6f027007d3f67` |
+| [TWRP-3.7.1-16-OP64D3L1-2026-07-07-1038-data-decrypt-v19-keystore-user.img](https://github.com/miuiadmin/twrp_device_oneplus_OP64D3L1/releases/download/v0.0.1/TWRP-3.7.1-16-OP64D3L1-2026-07-07-1038-data-decrypt-v19-keystore-user.img) | `/data` 解密实验版 v19，keystore2 改用 `keystore` 用户运行 | `c82ccbd0bad4bf2627be3e3b02c9dfa42c053374db6edd9c99a7d16cd8b44390` |
+| [TWRP-3.7.1-16-OP64D3L1-2026-07-07-1036-data-decrypt-v18-keystore-late-only.img](https://github.com/miuiadmin/twrp_device_oneplus_OP64D3L1/releases/download/v0.0.1/TWRP-3.7.1-16-OP64D3L1-2026-07-07-1036-data-decrypt-v18-keystore-late-only.img) | `/data` 解密实验版 v18，keystore2 延后到 KeyMint/Gatekeeper 后启动 | `6c6064e3bff80ab29f518d48e63198b1e3f3a8f01b58ca61de168dd247b555b9` |
 | [TWRP-3.7.1-16-OP64D3L1-2026-07-03-1915-data-decrypt-keystore-iface-v17.img](https://github.com/miuiadmin/twrp_device_oneplus_OP64D3L1/releases/download/v0.0.1/TWRP-3.7.1-16-OP64D3L1-2026-07-03-1915-data-decrypt-keystore-iface-v17.img) | `/data` 解密实验版 v17，补充 keystore2 AIDL interface 注册 | `f4476564ca4d5034ca4775b0555ec11d392d85e6000c06478c23c123ed702d5e` |
 | [TWRP-3.7.1-16-OP64D3L1-2026-07-03-143959-no-timeout-no-otg.img](https://github.com/miuiadmin/twrp_device_oneplus_OP64D3L1/releases/download/v0.0.1/TWRP-3.7.1-16-OP64D3L1-2026-07-03-143959-no-timeout-no-otg.img) | 已验证可用的 TWRP v0.0.1 | `293150a8d0e71c3213d6a70d7fdc982b423f679353081c73485ab76f2f83e0b3` |
 | [boot.img](https://github.com/miuiadmin/twrp_device_oneplus_OP64D3L1/releases/download/v0.0.1/boot.img) | 官方 boot 分区 | `44901063653fb1094cb758f255a08f96601dff6a7059f4c03fdbe2ea60e224d9` |
@@ -54,6 +60,15 @@ Release 页面：[v0.0.1](https://github.com/miuiadmin/twrp_device_oneplus_OP64D
 ## `/data` 解密实验版
 
 `TWRP-3.7.1-16-OP64D3L1-2026-07-03-1915-data-decrypt-keystore-iface-v17.img` 是基于 v0.0.1 继续排查 `/data` 解密的实验镜像。它加入 QCOM FBE/metadata decrypt 配置、KeyMint/Gatekeeper/QSEE 依赖、早期 `/odm` 挂载，以及 `keystore2` 的 `android.system.keystore2.IKeystoreService/default` AIDL interface 声明。
+
+`2026-07-07` 批量构建了 v18-v23 六个广撒网实验方向：
+
+- v18：keystore2 延后到 KeyMint/Gatekeeper 后启动。
+- v19：keystore2 改用 `keystore` 用户运行。
+- v20：`/data` fstab 尝试旧式 `fileencryption=ice,wrappedkey`。
+- v21：恢复 TWRP additional fstab processing。
+- v22：平台版本和安全补丁级别改为 Android 16 / `2026-06-01`。
+- v23：组合 v18 和 v22。
 
 该版本用于验证解密链路，不代表已经完整解决 `/data` 解密；需要稳定使用 recovery 时，优先使用上表中已验证的 `no-timeout-no-otg` 镜像。
 
