@@ -22,6 +22,15 @@ if [[ ! -f "$TWRP_SRC/device/oneplus/OP64D3L1/AndroidProducts.mk" ]]; then
     exit 2
 fi
 
+# Keep one integration build away from this source tree at a time.  A second
+# invocation must not delete target output while another clean build is active.
+mkdir -p "$TWRP_SRC/out"
+exec 9>"$TWRP_SRC/out/.op64d3l1-build-integration.lock"
+if ! flock -x -n 9; then
+    echo "ERROR: another OP64D3L1 integration build is using this source tree" >&2
+    exit 2
+fi
+
 GUI_SOURCE=$TWRP_SRC/bootable/recovery/gui/gui.cpp
 GUI_PATCH=$DEVICE_TREE/patches/0001-twrp-gui-input-latency-frame-timeout.patch
 if ! grep -q 'Keep input handling tied to the render cadence' "$GUI_SOURCE"; then
@@ -55,7 +64,12 @@ set -u
 
 # Build this prebuilt before recoveryimage. In a parallel clean build, the
 # recovery ramdisk timestamp rule can otherwise race its install target.
+TASK_PROFILES=$TWRP_SRC/out/target/product/OP64D3L1/system/etc/task_profiles.json
 m -j"$JOBS" out/target/product/OP64D3L1/system/etc/task_profiles.json
+[[ -s "$TASK_PROFILES" ]] || {
+    echo "task_profiles.json was not installed before recoveryimage" >&2
+    exit 1
+}
 m -j"$JOBS" recoveryimage
 
 IMAGE=$TWRP_SRC/out/target/product/OP64D3L1/recovery.img

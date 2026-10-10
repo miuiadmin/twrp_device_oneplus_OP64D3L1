@@ -24,6 +24,8 @@ cd device/oneplus/OP64D3L1
 tools/build-integration.sh
 ```
 
+脚本会持有 `out/.op64d3l1-build-integration.lock`：同一 source tree 同时只允许一个 integration build，避免第二个实例删除正在构建的 target output。
+
 可配置：
 
 ```bash

@@ -151,3 +151,20 @@ cannot delete non-empty directory: root/odm/firmware
 原因：旧 target output 中 `recovery/root/odm/firmware` 的目录/符号链接形态与当前设备树不一致，rsync restage 无法安全替换。
 
 处理：构建脚本始终删除 `out/target/product/OP64D3L1`。这同时降低 stale ramdisk 和 v17 覆盖残留风险。
+
+## 13. 双脚本实例互相破坏 clean build
+
+一次烟测时，前一个 clean build 仍在运行，另一个脚本实例超时等待 Android `out/.lock` 后仍继续删除了 `out/target/product/OP64D3L1`。这会让正在构建的 `twrp_ramdisk-timestamp` 抢跑，表现为：
+
+```text
+cp: bad 'out/target/product/OP64D3L1/system/etc/task_profiles.json': No such file or directory
+```
+
+该失败不是设备树规则本身的问题，而是并发脚本把另一个实例的 target output 清掉了。
+
+处理：
+
+- 构建脚本增加独立 `out/.op64d3l1-build-integration.lock`。
+- 同一 source tree 同时只允许一个 integration build。
+- 预构建后立即断言 `task_profiles.json` 已生成。
+- 失败时先查是否有残留构建进程和双实例，再修改源码。
