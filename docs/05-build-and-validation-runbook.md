@@ -43,8 +43,10 @@ tools/build-integration.sh
 3. 先构建 `system/etc/task_profiles.json`，规避本次发现的 Ninja 竞态。
 4. 构建 `recoveryimage`。
 5. 检查镜像大小和关键 staged 文件。
-6. 检查设备树中没有 v17 keystore interface 覆盖。
+6. 检查 target output 中实际 staged 的 `keystore2.rc` 存在且没有 v17 interface 覆盖；历史文档不参与门禁。
 7. 导出镜像和 `.sha256`。
+
+2026-10-10 服务器 clean-build 烟测要求脚本完整通过：两次 `m` 阶段均成功、静态 staged-file 门禁通过、并导出 100MiB 镜像和 SHA256。结果见 `logs/2026-10-10-build-tool-clean-smoke.log`。
 
 ## 3. 必须清理 target product output
 
@@ -92,7 +94,7 @@ tools/inspect-recovery-image.sh TWRP-*.img
 - `keystore2.rc` 没有 v17 interface 覆盖。
 - `7za` 和 `zstd` 存在。
 
-## 7. 刷入前检查
+## 6. 刷入前检查
 
 ```bash
 shasum -a 256 IMAGE.img

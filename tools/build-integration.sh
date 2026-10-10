@@ -96,9 +96,13 @@ for file in "${required_staged_files[@]}"; do
     [[ -f "$ROOT/$file" ]] || { echo "Missing staged file: $file" >&2; exit 1; }
 done
 
-KEYSTORE_RC=$DEVICE_TREE/recovery/root/system/etc/init/keystore2.rc
-if grep -Fq 'interface aidl android.system.keystore2.IKeystoreService/default' "$KEYSTORE_RC"; then
-    echo "Unexpected v17 keystore interface override in $KEYSTORE_RC" >&2
+STAGED_KEYSTORE_RC=$ROOT/system/etc/init/keystore2.rc
+if [[ ! -f "$STAGED_KEYSTORE_RC" ]]; then
+    echo "Missing staged keystore2.rc: $STAGED_KEYSTORE_RC" >&2
+    exit 1
+fi
+if grep -Fq 'interface aidl android.system.keystore2.IKeystoreService/default' "$STAGED_KEYSTORE_RC"; then
+    echo "Unexpected v17 keystore interface override in $STAGED_KEYSTORE_RC" >&2
     exit 1
 fi
 

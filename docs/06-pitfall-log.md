@@ -173,10 +173,12 @@ cp: bad 'out/target/product/OP64D3L1/system/etc/task_profiles.json': No such fil
 
 构建脚本曾用 `grep -R` 在整个设备树中查找 v17 `keystore2.rc` interface 覆盖。完整研发文档为了保留踩坑记录也包含这行文本，导致镜像已完成构建后被文档内容误判为失败。
 
-处理：门禁只检查实际打包源文件：
+处理：门禁不能递归扫描历史文档，也不能假设 `keystore2.rc` 一定来自设备树源文件。本仓库的该 RC 会由构建系统 staged 到 target output，因此发布门禁检查：
 
 ```text
-recovery/root/system/etc/init/keystore2.rc
+out/target/product/OP64D3L1/recovery/root/system/etc/init/keystore2.rc
 ```
 
-原则：安全门禁必须指向真实输入文件，历史文档不能参与 release 判定。
+同时要求该文件存在；`grep` 因文件不存在返回非零不能视为通过。
+
+原则：安全门禁必须指向实际打包产物，历史文档和缺失文件都不能参与 release 判定。
