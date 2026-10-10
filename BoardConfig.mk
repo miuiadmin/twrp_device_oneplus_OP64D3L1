@@ -173,7 +173,6 @@ TW_FRAMERATE := 60
 TW_ENABLE_ALL_PARTITION_TOOLS := true
 TW_INCLUDE_7ZA := true
 TW_INCLUDE_ZSTD := true
-TW_USE_NEW_MINADBD := true
 
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone21/temp
 TWRP_INCLUDE_LOGCAT := true

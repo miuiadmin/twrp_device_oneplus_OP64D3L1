@@ -21,6 +21,8 @@ with the enhancements and release documentation maintained in this repository.
 - Local release checksums and asset notes under `docs/`
 - Data-decryption experiment notes for regression tracking
 - Rollback image procedures and SHA-256 verification workflow
+- Stable default adbd configuration. Do not enable `TW_USE_NEW_MINADBD` here; it caused
+  a first recovery boot with no USB/ADB/fastboot device in on-device testing.
 
 The failed v17 device-tree `keystore2.rc` override is intentionally absent. The
 base TWRP source supplies its normal `keystore2.rc`; this device tree relies on
