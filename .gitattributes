@@ -1,4 +1,7 @@
 # Text files: force LF line endings for cross-platform consistency
+# Repository tooling must remain text even when its filename contains image.
+tools/*.sh text eol=lf
+
 *.mk    text eol=lf
 *.bp    text eol=lf
 *.rc    text eol=lf
