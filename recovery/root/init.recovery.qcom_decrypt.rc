@@ -33,9 +33,13 @@ service prepdecrypt /system/bin/prepdecrypt.sh
     user root
 	seclabel u:r:recovery:s0
 
+# prepdecrypt mounts /persist, installs TWRP settings, and publishes the
+# readiness property before security HALs are started.
 on post-fs-data
     start prepdecrypt
 	
+# Keep this ordering deliberate. Starting these HALs before persist/QSEE are
+# ready was one of the root causes in the earlier failed experiments.
 on property:crypto.ready=1
     start vendor.gatekeeper_default
     start vendor.keymint-qti

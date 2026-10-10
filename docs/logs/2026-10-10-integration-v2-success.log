@@ -1,0 +1,2072 @@
+Starting TWRP 3.7.1_16-OnePlus Turbo6V-6bd8134e-dirty on Fri Jun  5 07:49:06 1970
+ (pid 529)
+I:=> device id not found, using 'serialno'
+RECOVERY_SDCARD_ON_DATA := true
+I:Lun file '/config/usb_gadget/g1/functions/mass_storage.0/lun.0/file'
+TW_HAS_EDL_MODE := true
+TW_INCLUDE_FASTBOOTD := true
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+TW_INCLUDE_CRYPTO := true
+I:TW_BRIGHTNESS_PATH := /sys/class/backlight/panel0-backlight/brightness
+I:Found brightness file at '/sys/class/backlight/panel0-backlight/brightness'
+I:TWFunc::Set_Brightness: Setting brightness control to 2600
+I:TW_EXCLUDE_ENCRYPTED_BACKUPS := true
+I:LANG: zh_CN
+I:AB_OTA_UPDATER := true
+boot command: boot-recovery
+I:Startup Commands: 
+=> Linking mtab
+=> Processing /etc/recovery.fstab
+I:Reading /etc/twrp.flags
+I:Reading /etc/recovery.fstab
+I:Processing '/system'
+I:Created '/system_root' folder.
+I:Unhandled flag: 'first_stage_mount'
+I:Trying to prepare system from super partition
+I:Symlinking /dev/block/dm-0 => /dev/block/bootdevice/by-name/system 
+I:Found an additional entry for '/system'
+I:Processing '/system'
+I:Processing '/system_ext'
+I:Created '/system_ext' folder.
+I:Unhandled flag: 'first_stage_mount'
+I:Trying to prepare system_ext from super partition
+I:Symlinking /dev/block/dm-1 => /dev/block/bootdevice/by-name/system_ext 
+I:Found an additional entry for '/system_ext'
+I:Processing '/system_ext'
+I:Processing '/product'
+I:Unhandled flag: 'first_stage_mount'
+I:Trying to prepare product from super partition
+I:Symlinking /dev/block/dm-3 => /dev/block/bootdevice/by-name/product 
+I:Found an additional entry for '/product'
+I:Processing '/product'
+I:Processing '/vendor'
+I:Unhandled flag: 'first_stage_mount'
+I:Trying to prepare vendor from super partition
+I:Symlinking /dev/block/dm-2 => /dev/block/bootdevice/by-name/vendor 
+I:Found an additional entry for '/vendor'
+I:Processing '/vendor'
+I:Processing '/odm'
+I:Unhandled flag: 'first_stage_mount'
+I:Trying to prepare odm from super partition
+I:Symlinking /dev/block/dm-5 => /dev/block/bootdevice/by-name/odm 
+I:Found an additional entry for '/odm'
+I:Processing '/odm'
+I:Processing '/my_product'
+I:Created '/my_product' folder.
+I:Unhandled flag: 'first_stage_mount'
+I:Trying to prepare my_product from super partition
+I:Symlinking /dev/block/dm-4 => /dev/block/bootdevice/by-name/my_product 
+I:Found an additional entry for '/my_product'
+I:Processing '/my_product'
+I:Processing '/my_company'
+I:Created '/my_company' folder.
+I:Unhandled flag: 'first_stage_mount'
+I:Unhandled flag: 'nofail'
+I:Trying to prepare my_company from super partition
+I:Symlinking /dev/block/dm-15 => /dev/block/bootdevice/by-name/my_company 
+I:Found an additional entry for '/my_company'
+I:Processing '/my_company'
+I:Processing '/my_carrier'
+I:Created '/my_carrier' folder.
+I:Unhandled flag: 'first_stage_mount'
+I:Unhandled flag: 'nofail'
+I:Trying to prepare my_carrier from super partition
+I:Symlinking /dev/block/dm-13 => /dev/block/bootdevice/by-name/my_carrier 
+I:Found an additional entry for '/my_carrier'
+I:Processing '/my_carrier'
+I:Processing '/my_region'
+I:Created '/my_region' folder.
+I:Unhandled flag: 'first_stage_mount'
+I:Unhandled flag: 'nofail'
+I:Trying to prepare my_region from super partition
+I:Symlinking /dev/block/dm-14 => /dev/block/bootdevice/by-name/my_region 
+I:Found an additional entry for '/my_region'
+I:Processing '/my_region'
+I:Processing '/my_bigball'
+I:Created '/my_bigball' folder.
+I:Unhandled flag: 'first_stage_mount'
+I:Unhandled flag: 'nofail'
+I:Trying to prepare my_bigball from super partition
+I:Symlinking /dev/block/dm-17 => /dev/block/bootdevice/by-name/my_bigball 
+I:Found an additional entry for '/my_bigball'
+I:Processing '/my_bigball'
+I:Processing '/my_heytap'
+I:Created '/my_heytap' folder.
+I:Unhandled flag: 'first_stage_mount'
+I:Unhandled flag: 'nofail'
+I:Trying to prepare my_heytap from super partition
+I:Symlinking /dev/block/dm-12 => /dev/block/bootdevice/by-name/my_heytap 
+I:Found an additional entry for '/my_heytap'
+I:Processing '/my_heytap'
+I:Processing '/my_stock'
+I:Created '/my_stock' folder.
+I:Unhandled flag: 'first_stage_mount'
+I:Unhandled flag: 'nofail'
+I:Trying to prepare my_stock from super partition
+I:Symlinking /dev/block/dm-11 => /dev/block/bootdevice/by-name/my_stock 
+I:Found an additional entry for '/my_stock'
+I:Processing '/my_stock'
+I:Processing '/my_preload'
+I:Created '/my_preload' folder.
+I:Unhandled flag: 'first_stage_mount'
+I:Unhandled flag: 'nofail'
+I:Trying to prepare my_preload from super partition
+I:Symlinking /dev/block/dm-16 => /dev/block/bootdevice/by-name/my_preload 
+I:Found an additional entry for '/my_preload'
+I:Processing '/my_preload'
+I:Processing '/my_manifest'
+I:Created '/my_manifest' folder.
+I:Unhandled flag: 'first_stage_mount'
+I:Unhandled flag: 'nofail'
+I:Trying to prepare my_manifest from super partition
+I:Symlinking /dev/block/dm-18 => /dev/block/bootdevice/by-name/my_manifest 
+I:Found an additional entry for '/my_manifest'
+I:Processing '/my_manifest'
+I:Processing '/my_engineering'
+I:Created '/my_engineering' folder.
+I:Unhandled flag: 'first_stage_mount'
+I:Trying to prepare my_engineering from super partition
+I:Symlinking /dev/block/dm-6 => /dev/block/bootdevice/by-name/my_engineering 
+I:Found an additional entry for '/my_engineering'
+I:Processing '/my_engineering'
+I:Processing '/cache'
+I:Created '/cache' folder.
+I:Unhandled flag: 'first_stage_mount'
+I:Processing '/metadata'
+I:Unhandled flag: 'first_stage_mount'
+I:Processing '/data'
+I:Unhandled flag: 'latemount'
+I:FBE contents 'aes-256-xts', filenames 'aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0'
+I:setting Key_Directory to: /metadata/vold/metadata_encryption
+I:Metadata contents 'aes-256-xts', filenames 'wrappedkey_v0'
+I:Unhandled flag: 'reservedsize=128M'
+I:Unhandled flag: 'sysfs_path=/sys/devices/platform/soc/1d84000.ufshc'
+I:Unhandled flag: 'checkpoint=fs'
+I:FBE contents 'aes-256-xts', filenames 'aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0'
+I:setting Key_Directory to: /metadata/vold/metadata_encryption
+I:Metadata contents 'aes-256-xts', filenames 'wrappedkey_v0'
+I:Processing '/external_sd'
+I:Created '/external_sd' folder.
+I:Processing '/usb_otg'
+I:Created '/usb_otg' folder.
+I:Processing '/boot'
+I:Processing '/recovery'
+I:Processing '/misc'
+I:Processing '/aboot'
+I:Processing '/abootbak'
+I:Found an additional entry for '/vendor/firmware_mnt'
+I:Processing '/vendor/firmware_mnt'
+I:Processing '/sbl1'
+I:Processing '/sbl1bak'
+I:Processing '/rpm'
+I:Processing '/rpmbak'
+I:Processing '/tz'
+I:Processing '/tzbak'
+I:Processing '/modemst1'
+I:Processing '/modemst2'
+I:Processing '/static_nv_bk'
+I:Processing '/oppodycnvbk'
+I:Processing '/logo'
+I:Processing '/reserve4'
+I:Processing '/dsp'
+I:Processing '/DDR'
+I:Processing '/devcfg'
+I:Processing '/mdtp'
+I:Processing '/cmnlib'
+I:Processing '/cmnlibbak'
+I:Processing '/keymaster'
+I:Processing '/keymasterbak'
+I:Processing '/apdp'
+I:Processing '/devinfo'
+I:Processing '/opporeserve'
+I:Processing '/abl'
+I:Processing '/ablbak'
+I:Processing '/xbl'
+I:Processing '/xblbak'
+I:Processing remaining twrp.flags
+I:Processing '/bluetooth'
+I:Processing '/bt_firmware'
+I:Created '/bt_firmware' folder.
+I:Processing '/dtbo'
+I:Processing '/efs1'
+I:Processing '/efs2'
+I:Processing '/firmware'
+I:Created '/firmware' folder.
+I:Processing '/fsg'
+I:Processing '/modem'
+I:Processing '/vbmeta'
+I:Processing '/vbmeta_system'
+I:Mount_Flags: 0, Mount_Options: 
+I:Mount_Flags: 0, Mount_Options: 
+I:Setting 'external_storage.casefold.enabled' to '1' from /vendor/build.prop
+I:Setting 'external_storage.sdcardfs.enabled' to '0' from /vendor/build.prop
+I:GetFstabPath: /odm/etc/fstab.default
+I:GetFstabPath: /vendor/etc/fstab.default
+I:GetFstabPath: /system/etc/fstab.default
+I:GetFstabPath: /first_stage_ramdisk/system/etc/fstab.default
+I:GetFstabPath: /fstab.default
+I:GetFstabPath: /first_stage_ramdisk/fstab.default
+I:GetFstabPath: /odm/etc/fstab.qcom
+I:GetFstabPath: /vendor/etc/fstab.qcom
+I:Fstab: /vendor/etc/fstab.qcom
+I:Reading /etc/additional.fstab
+I:Processing '/metadata'
+I:Unhandled flag: 'first_stage_mount'
+I:Processing '/data'
+I:Unhandled flag: 'latemount'
+I:FBE contents 'aes-256-xts', filenames 'aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0'
+I:setting Key_Directory to: /metadata/vold/metadata_encryption
+I:Metadata contents 'aes-256-xts', filenames 'wrappedkey_v0'
+I:Unhandled flag: 'reservedsize=128M'
+I:Unhandled flag: 'sysfs_path=/sys/devices/platform/soc/1d84000.ufshc'
+I:Unhandled flag: 'checkpoint=fs'
+I:Ignoring the 'fscompress' fstab flag
+I:Done processing fstab files
+I:Property ro.boot.product.vendor.sku not found, trying to get vintf manifest file name from ro.board.platform
+I:Separate manifest doesn't exist for 'android.hardware.keymaster'
+I:PageManager::LoadFileToBuffer loading filename: '/vendor/etc/vintf/manifest_volcano.xml' directly
+I:Looking for 'android.hardware.keymaster' service in manifest
+I:Keymaster_Ver::Unable to find vendor manifest on the device, and no default value set. Checking the ramdisk manifest
+I:Property ro.boot.product.vendor.sku not found, trying to get vintf manifest file name from ro.board.platform
+I:Separate manifest doesn't exist for 'android.hardware.keymaster'
+I:/vendor/etc/vintf/manifest_volcano.xml not found. Using default path for manifest.xml
+I:PageManager::LoadFileToBuffer loading filename: '/vendor/etc/vintf/manifest.xml' directly
+I:Looking for 'android.hardware.keymaster' service in manifest
+I:Keymaster_Ver::Using keymaster version '' for decryption
+Starting the UI...
+width: 1272, height: 2772
+setting DRM_FORMAT_XBGR8888 and GGL_PIXEL_FORMAT_RGBA_8888
+setting DRM_FORMAT_XBGR8888 and GGL_PIXEL_FORMAT_RGBA_8888
+number of lms in topology 1
+Atomic Commit succeedUsing drm graphics.
+I:TWFunc::Set_Brightness: Setting brightness control to 2600
+I:Loading package: splash (/twres/splash.xml)
+I:Load XML directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/splash.xml' directly
+I:Checking resolution...
+I:Scaling theme width 1.177778x and height 1.443750x, offsets x: 0 y: 0 w: 0 h: 0
+I:Loading resources...
+I:Loading variables...
+I:Loading mouse cursor...
+I:Loading pages...
+I:Loading page splash
+I:Switching packages (splash)
+I:Can't probe device /dev/block/sda15
+I:Unable to mount '/data'
+I:Actual block device: '/dev/block/sda15', current file system: 'f2fs'
+I:Setting up '/data' as data/media emulated storage.
+I:Can't probe device /dev/block/sda15
+I:Unable to mount '/data'
+I:Actual block device: '/dev/block/sda15', current file system: 'f2fs'
+I:Mount_Flags: 0, Mount_Options: 
+I:Apex is disabled in this build
+I:Backup folder set to '/data/media/TWRP/BACKUPS/serialno'
+Using additional fstab for decryption /etc/additional.fstab 
+I:Successfully decrypted metadata encrypted data partition with new block device: '/dev/block/mapper/userdata'
+I:File Based Encryption is present
+Attempting to initialize DE keys
+SELinux: Loaded file context from:
+		/plat_file_contexts
+		/system_ext_file_contexts
+		/product_file_contexts
+		/vendor_file_contexts
+		/odm_file_contexts
+Handle is 'aa59fcda8f4969c1'
+password type: PIN
+I:Android 12+: '/data/system/users/0.xml' has been converted into plain text xml (for user 0).
+I:PageManager::LoadFileToBuffer loading filename: '/tmp/converted_xml/0.xml' directly
+Handle is 'aa59fcda8f4969c1'
+password type: PIN
+I:Android 12+: '/data/system/users/995.xml' has been converted into plain text xml (for user 995).
+I:PageManager::LoadFileToBuffer loading filename: '/tmp/converted_xml/995.xml' directly
+Handle is 'bd3991b6859a2ed5'
+trying to read password_file data with leading 0
+Failed to read '/data/system_de/995/spblob/0bd3991b6859a2ed5.pwd'
+Failed to read '/data/system_de/995/spblob/00bd3991b6859a2ed5.pwd'
+Failed to Get_Password_Data
+I:Android 12+: '/data/system/users/996.xml' has been converted into plain text xml (for user 996).
+I:PageManager::LoadFileToBuffer loading filename: '/tmp/converted_xml/996.xml' directly
+Handle is 'c4120b6c642ac02f'
+trying to read password_file data with leading 0
+Failed to read '/data/system_de/996/spblob/0c4120b6c642ac02f.pwd'
+Failed to read '/data/system_de/996/spblob/00c4120b6c642ac02f.pwd'
+Failed to Get_Password_Data
+I:Android 12+: '/data/system/users/997.xml' has been converted into plain text xml (for user 997).
+I:PageManager::LoadFileToBuffer loading filename: '/tmp/converted_xml/997.xml' directly
+Handle is '7e3a9ba4f441e1a9'
+trying to read password_file data with leading 0
+Failed to read '/data/system_de/997/spblob/07e3a9ba4f441e1a9.pwd'
+Failed to read '/data/system_de/997/spblob/007e3a9ba4f441e1a9.pwd'
+Failed to Get_Password_Data
+I:Android 12+: '/data/system/users/998.xml' has been converted into plain text xml (for user 998).
+I:PageManager::LoadFileToBuffer loading filename: '/tmp/converted_xml/998.xml' directly
+Handle is 'cba4645275db31e'
+trying to read password_file data with leading 0
+Failed to read '/data/system_de/998/spblob/0cba4645275db31e.pwd'
+Failed to read '/data/system_de/998/spblob/00cba4645275db31e.pwd'
+Failed to Get_Password_Data
+I:Android 12+: '/data/system/users/999.xml' has been converted into plain text xml (for user 999).
+I:PageManager::LoadFileToBuffer loading filename: '/tmp/converted_xml/999.xml' directly
+Handle is 'cde0b6a3ccb0ca89'
+trying to read password_file data with leading 0
+Failed to read '/data/system_de/999/spblob/0cde0b6a3ccb0ca89.pwd'
+Failed to read '/data/system_de/999/spblob/00cde0b6a3ccb0ca89.pwd'
+Failed to Get_Password_Data
+I:User 0 is not decrypted.
+Updating partition details...
+I:checking for twrp app
+I:Mount_Flags: 0, Mount_Options: 
+I:Mount_Flags: 0, Mount_Options: 
+I:Mount_Flags: 0, Mount_Options: 
+I:Mount_Flags: 0, Mount_Options: 
+I:Mount_Flags: 0, Mount_Options: 
+I:Mount_Flags: 0, Mount_Options: 
+I:Mount_Flags: 0, Mount_Options: 
+I:Mount_Flags: 0, Mount_Options: 
+I:Mount_Flags: 0, Mount_Options: 
+I:Mount_Flags: 0, Mount_Options: 
+I:Mount_Flags: 0, Mount_Options: 
+I:Mount_Flags: 0, Mount_Options: 
+I:Can't probe device /dev/block/sda1
+I:Unable to mount '/usb_otg'
+I:Actual block device: '/dev/block/sda1', current file system: 'vfat'
+I:Data backup size is 49978MB, free: 166473MB.
+...done
+/super | /dev/block/by-name/super | Size: 0MB
+   Flags: Can_Be_Backed_Up IsPresent Can_Flash_Img 
+   Alternate_Block_Device: /dev/block/by-name/super
+   Display_Name: super
+   Backup_Path: /super
+   Backup_Name: super
+   Backup_Display_Name: Super (system system_ext product vendor)
+   Current_File_System: emmc
+   Backup_Method: dd
+
+I:Unmounting main partitions...
+I:Loading package: TWRP (/twres/ui.xml)
+I:Load XML directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/zh_TW.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/zh_CN.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/uk.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/tr.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/sv.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/sl.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/sk.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/ru.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/pt_PT.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/pt_BR.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/pl.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/nl.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/lk.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/ja.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/it.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/id.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/hu.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/fr.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/es.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/en.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/el.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/de.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/cz.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/en.xml' directly
+parsing languageFile
+parsing languageFile done
+I:PageManager::LoadFileToBuffer loading filename: '/twres/ui.xml' directly
+I:Checking resolution...
+I:Scaling theme width 1.177778x and height 1.443750x, offsets x: 0 y: 0 w: 0 h: 0
+I:Loading resources...
+I:Failed to load image from indeterminate013, error -1
+I:Loading variables...
+I:Loading mouse cursor...
+I:Loading pages...
+I:Including file: /twres/portrait.xml...
+I:PageManager::LoadFileToBuffer loading filename: '/twres/portrait.xml' directly
+I:Loading resources...
+I:Loading variables...
+I:Loading mouse cursor...
+I:Loading pages...
+I:Loading page main
+I:Loading page main2
+I:Loading page install
+I:Loading page flash_confirm
+I:Loading page flash_zip
+I:Loading page flash_done
+I:Loading page flash_sleep_and_reboot
+I:Loading page flashimage_confirm
+I:Loading page clear_vars
+I:Loading page reboot_system_routine
+I:Loading page confirm_action
+I:Loading page action_page
+I:Loading page singleaction_page
+I:Loading page action_complete
+I:Loading page filecheck
+I:Loading page rebootcheck
+I:Loading page wipe
+I:Loading page advancedwipe
+I:Loading page formatdata
+I:Loading page formatdata_confirm
+I:Loading page wlan_password
+I:Loading page checkpartitionlist
+I:Loading page partitionoptions
+I:Loading page refreshfilesystem
+I:Loading page selectfilesystem
+I:Loading page backup
+I:Loading page multiuser_warning
+I:Loading page backup_options
+I:Loading page backupname1
+I:Loading page backupname2
+I:Loading page backupencryption
+I:Loading page backupencryption2
+I:Loading page checkbackuppassword
+I:Loading page backup_run
+I:Loading page restore
+I:Unable to open '/data/media/TWRP/BACKUPS/serialno'
+I:Loading page restore_force
+I:Unable to open '/data/media/TWRP/BACKUPS'
+I:Loading page restore_read
+I:Loading page restore_decrypt
+I:Loading page try_restore_decrypt
+I:Loading page restore_select
+I:Loading page renamebackup
+I:Loading page restore_run
+I:Loading page mount
+I:Loading page usb_mount
+I:Loading page usb_umount
+I:Loading page system_readonly_check
+I:Loading page fastbootreboot
+I:Loading page reboot
+I:Loading page installapp
+I:Loading page system_readonly
+I:Loading page settings
+I:Loading page settings_timezone
+I:Loading page settings_screen
+I:Loading page settings_vibration
+I:Loading page settings_language
+I:Loading page copylog
+I:Loading page extension
+I:Loading page wlan
+I:Loading page advanced
+I:Loading page partsdcardsel
+I:Loading page partsdcardcheck
+I:Loading page partsdcard
+I:Loading page repackselect
+I:Loading page repackconfirm
+I:Loading page lock
+I:Loading page filemanagerlist
+I:Loading page filemanageroptions
+I:Loading page choosedestinationfolder
+I:Loading page filemanagerrenamefile
+I:Loading page filemanagerrenamefolder
+I:Loading page filemanagerchmod
+I:Loading page filemanagerconfirm
+I:Loading page filemanageraction
+I:Loading page decrypt
+I:Loading page decrypt_pattern
+I:Loading page decrypt_pin
+I:Loading page trydecrypt
+I:Loading page canceldecrypt
+I:Loading page terminalcommand
+I:Loading page fastboot
+I:Loading page sideload
+I:Loading page fixcontexts
+I:Loading page slideout
+I:Loading page select_storage
+I:Loading page select_wlan
+I:Loading page select_language
+I:Loading page decrypt_users
+I:Loading page changeTwrpFolder
+I:Loading page restore_keymaster
+I:Set page: 'decrypt_pin'
+I:Switching packages (TWRP)
+I:Attempt to load settings from settings file...
+I:Is_Mounted: Unable to find partition for path '/persist/TWRP'
+I:InfoManager loading from '/persist/TWRP/.twrp_settings'.
+I:UnMount: Unable to find partition for path '/persist'
+I:LoadValues setting storage path to '/data/media'
+I:Backup folder set to '/data/media/TWRP/BACKUPS/serialno'
+I:Version number saved to '/cache/recovery/.version'
+I:Unable to mount '/external_sd'
+I:Actual block device: '', current file system: 'vfat'
+I:Can't probe device /dev/block/sda1
+I:Unable to mount '/usb_otg'
+I:Actual block device: '/dev/block/sda1', current file system: 'vfat'
+I:TWFunc::Set_Brightness: Setting brightness control to 2047
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/zh_CN.xml' directly
+parsing languageFile
+parsing languageFile done
+I:Translating partition display names
+I:Backup folder set to '/data/media/TWRP/BACKUPS/serialno'
+ro.boot.mode=recovery
+ro.boot.memcg=1
+ro.boot.chipid=35d5a5c4
+ro.boot.vbmeta.size=21248
+ro.boot.vbmeta.device=PARTUUID=e41926c6-de4f-a591-7960-11ab4e588c4f
+ro.boot.vbmeta.digest=8d2e50ab51252975003e80402a4868e42e9ae1f1ba428bd453574748def9c8f1
+ro.boot.vbmeta.hash_alg=sha256
+ro.boot.vbmeta.avb_version=1.2
+ro.boot.vbmeta.device_state=unlocked
+ro.boot.vendor.qspa.eva=enabled
+ro.boot.vendor.qspa.gpu=enabled
+ro.boot.vendor.qspa.nav=enabled
+ro.boot.vendor.qspa.npu=enabled
+ro.boot.vendor.qspa.nsp=enabled
+ro.boot.vendor.qspa.comp=enabled
+ro.boot.vendor.qspa.spss=enabled
+ro.boot.vendor.qspa.wlan=enabled
+ro.boot.vendor.qspa.audio=enabled
+ro.boot.vendor.qspa.comp1=enabled
+ro.boot.vendor.qspa.modem=enabled
+ro.boot.vendor.qspa.video=enabled
+ro.boot.vendor.qspa.camera=enabled
+ro.boot.vendor.qspa.display=enabled
+ro.boot.vendor.qspa.sensors=enabled
+ro.boot.vendor.qspa.display1=enabled
+ro.boot.dtb_idx=6
+ro.boot.prjname=25811
+ro.boot.baseband=msm
+ro.boot.chipecid=0000046335d5a5c4
+ro.boot.dtbo_idx=2
+ro.boot.hardware=qcom
+ro.boot.hardware.cpu.pagesize=4096
+ro.boot.keymaster=1
+ro.boot.bootdevice=1d84000.ufshc
+ro.boot.veritymode=enforcing
+ro.boot.veritymode.managed=yes
+ro.boot.boot_devices=soc/1d84000.ufshc
+ro.boot.usbcontroller=a600000.dwc3
+ro.boot.recoveryreason=misc_no_clear
+ro.boot.verifiedbootstate=orange
+ro.boot.load_modules_parallel=true
+ro.baseband=msm
+ro.bootmode=recovery
+ro.hardware=qcom
+ro.revision=0
+ro.bootloader=unknown
+ro.boottime.adbd=1410993697
+ro.boottime.init=340818176
+ro.boottime.init.modules=764
+ro.boottime.init.selinux=57942865
+ro.boottime.init.first_stage=771719739
+ro.boottime.init.cold_boot_wait=152
+ro.boottime.logd=1361654374
+ro.boottime.ttyd=1431580728
+ro.boottime.vendor.oplus.vibrator=1399997499
+ro.boottime.vendor.boot-qti=1404372290
+ro.boottime.vendor.qseecomd=1377768436
+ro.boottime.vendor.keymint-qti=1368202499
+ro.boottime.vendor.health-default=1398406874
+ro.boottime.vendor.gatekeeper_default=1469030311
+ro.boottime.charger=1393093072
+ro.boottime.console=1356864270
+ro.boottime.ueventd=1196978280
+ro.boottime.recovery=1394850051
+ro.boottime.keystore2=1386100624
+ro.boottime.microhttpd=1429433592
+ro.boottime.touch-aidl=1396706405
+ro.boottime.prepdecrypt=1389472759
+ro.boottime.servicemanager=1381259270
+ro.boottime.twrp-wifi-init=1391039634
+ro.boottime.qseecom-service=1382629634
+ro.boottime.hwservicemanager=1371606561
+ro.boottime.load-adsp-driver=1427095103
+ro.boottime.vndservicemanager=1384450676
+ro.boottime.init.fsck.data=11
+ro.boottime.init.mount.data=38
+ro.product.name_for_attestation=
+ro.product.brand_for_attestation=
+ro.product.model_for_attestation=
+ro.product.bootimage.name=ossi
+ro.product.bootimage.brand=oplus
+ro.product.bootimage.model=ossi
+ro.product.bootimage.device=ossi
+ro.product.bootimage.manufacturer=oplus
+ro.bootimage.build.id=UKQ1.231108.001
+ro.bootimage.build.date=Thu Jul  9 15:15:25 CST 2026
+ro.bootimage.build.date.utc=1783581325
+ro.bootimage.build.tags=release-keys
+ro.bootimage.build.type=user
+ro.bootimage.build.version.sdk=34
+ro.bootimage.build.version.release=14
+ro.bootimage.build.version.incremental=1783581325105
+ro.bootimage.build.version.release_or_codename=14
+ro.bootimage.build.fingerprint=oplus/ossi/ossi:14/UKQ1.231108.001/1783581325105:user/release-keys
+ro.odm.build.date=Sat Oct 10 16:23:27 CST 2026
+ro.odm.build.date.utc=1791620607
+ro.odm.build.version.incremental=eng.804179
+ro.odm.build.fingerprint=oplus/ossi/ossi:14/UKQ1.231108.001/1780037472654:eng/release-keys
+ro.product.odm.name=twrp_OP64D3L1
+ro.product.odm.brand=oneplus
+ro.product.odm.model=OP64D3L1
+ro.product.odm.device=OP64D3L1
+ro.product.odm.manufacturer=oneplus
+ro.build.id=BP2A.250605.031.A2
+ro.build.date=Sat Oct 10 16:23:27 CST 2026
+ro.build.date.utc=1791620607
+ro.build.host=dg03pod80417957gxsa
+ro.build.tags=test-keys
+ro.build.type=eng
+ro.build.user=80417957
+ro.build.flavor=twrp_OP64D3L1-eng
+ro.build.display.id=twrp_OP64D3L1-eng 99.87.36 BP2A.250605.031.A2 eng.804179 test-keys
+ro.build.product=OP64D3L1
+ro.build.version.sdk=36
+ro.build.version.base_os=
+ro.build.version.release=99.87.36
+ro.build.version.codename=REL
+ro.build.version.incremental=eng.804179
+ro.build.version.preview_sdk=0
+ro.build.version.all_codenames=REL
+ro.build.version.security_patch=2099-12-31
+ro.build.version.release_or_codename=99.87.36
+ro.build.version.preview_sdk_fingerprint=REL
+ro.build.version.min_supported_target_sdk=28
+ro.build.description=twrp_OP64D3L1-eng 99.87.36 BP2A.250605.031.A2 eng.804179 test-keys
+ro.build.characteristics=default
+ro.build.backported_fixes.alias_bitset.long_list=18
+ro.force.debuggable=0
+ro.llndk.api_level=202504
+ro.system.build.id=BP2A.250605.031.A2
+ro.system.build.date=Sat Oct 10 16:23:27 CST 2026
+ro.system.build.date.utc=1791620607
+ro.system.build.tags=test-keys
+ro.system.build.type=eng
+ro.system.build.version.sdk=36
+ro.system.build.version.release=99.87.36
+ro.system.build.version.incremental=eng.804179
+ro.system.build.version.release_or_codename=99.87.36
+ro.system.build.fingerprint=oplus/ossi/ossi:14/UKQ1.231108.001/1780037472654:eng/release-keys
+ro.treble.enabled=true
+ro.product.cpu.abi=arm64-v8a
+ro.product.cpu.abilist=arm64-v8a,armeabi-v7a,armeabi
+ro.product.cpu.pagesize.max=16384
+ro.product.cpu.abilist32=armeabi-v7a,armeabi
+ro.product.cpu.abilist64=arm64-v8a
+ro.product.name=twrp_OP64D3L1
+ro.product.brand=oneplus
+ro.product.build.id=BP2A.250605.031.A2
+ro.product.build.date=Sat Oct 10 16:23:27 CST 2026
+ro.product.build.date.utc=1791620607
+ro.product.build.tags=test-keys
+ro.product.build.type=eng
+ro.product.build.version.sdk=36
+ro.product.build.version.release=99.87.36
+ro.product.build.version.incremental=eng.804179
+ro.product.build.version.release_or_codename=99.87.36
+ro.product.build.fingerprint=oplus/ossi/ossi:14/UKQ1.231108.001/1780037472654:eng/release-keys
+ro.product.model=OP64D3L1
+ro.product.device=OP64D3L1
+ro.product.system.name=twrp_OP64D3L1
+ro.product.system.brand=oneplus
+ro.product.system.model=OP64D3L1
+ro.product.system.device=OP64D3L1
+ro.product.system.manufacturer=oneplus
+ro.product.product.name=twrp_OP64D3L1
+ro.product.product.brand=oneplus
+ro.product.product.model=OP64D3L1
+ro.product.product.device=OP64D3L1
+ro.product.product.manufacturer=oneplus
+ro.product.system_ext.name=twrp_OP64D3L1
+ro.product.system_ext.brand=oneplus
+ro.product.system_ext.model=OP64D3L1
+ro.product.system_ext.device=OP64D3L1
+ro.product.system_ext.manufacturer=oneplus
+ro.product.manufacturer=oneplus
+ro.system_ext.build.id=BP2A.250605.031.A2
+ro.system_ext.build.date=Sat Oct 10 16:23:27 CST 2026
+ro.system_ext.build.date.utc=1791620607
+ro.system_ext.build.tags=test-keys
+ro.system_ext.build.type=eng
+ro.system_ext.build.version.sdk=36
+ro.system_ext.build.version.release=99.87.36
+ro.system_ext.build.version.incremental=eng.804179
+ro.system_ext.build.version.release_or_codename=99.87.36
+ro.system_ext.build.fingerprint=oplus/ossi/ossi:14/UKQ1.231108.001/1780037472654:eng/release-keys
+ro.actionable_compatible_property.enabled=true
+ro.board.api_level=202504
+ro.board.api_frozen=true
+ro.vendor.build.date=Sat Oct 10 16:23:27 CST 2026
+ro.vendor.build.date.utc=1791620607
+ro.vendor.product.cpu.abilist=arm64-v8a,armeabi-v7a,armeabi
+ro.vendor.product.cpu.abilist32=armeabi-v7a,armeabi
+ro.vendor.product.cpu.abilist64=arm64-v8a
+ro.vendor.api_level=202504
+ro.product.board=volcano
+ro.product.vendor.name=twrp_OP64D3L1
+ro.product.vendor.brand=oneplus
+ro.product.vendor.model=OP64D3L1
+ro.product.vendor.device=OP64D3L1
+ro.product.vendor.manufacturer=oneplus
+ro.product.first_api_level=10000
+ro.cold_boot_done=true
+ro.bionic.arch=arm64
+ro.bionic.2nd_arch=arm
+ro.bionic.cpu_variant=kryo300
+ro.bionic.2nd_cpu_variant=kryo300
+ro.dalvik.vm.native.bridge=0
+ro.dalvik.vm.enable_uffd_gc=true
+ro.zygote=zygote64_32
+dalvik.vm.isa.arm.variant=kryo300
+dalvik.vm.isa.arm.features=default
+dalvik.vm.isa.arm64.variant=kryo300
+dalvik.vm.isa.arm64.features=default
+dalvik.vm.dexopt.secondary=true
+dalvik.vm.dexopt.thermal-cutoff=2
+dalvik.vm.usejit=true
+dalvik.vm.madvise.odexfile.size=104857600
+dalvik.vm.madvise.vdexfile.size=104857600
+dalvik.vm.lockprof.threshold=500
+dalvik.vm.dex2oat-Xms=64m
+dalvik.vm.dex2oat-Xmx=512m
+dalvik.vm.minidebuginfo=true
+dalvik.vm.useartservice=true
+dalvik.vm.appimageformat=lz4
+dalvik.vm.enable_pr_dexopt=true
+dalvik.vm.disable-odrefresh=true
+dalvik.vm.image-dex2oat-Xms=64m
+dalvik.vm.image-dex2oat-Xmx=64m
+dalvik.vm.usap_pool_enabled=false
+dalvik.vm.usap_pool_size_max=3
+dalvik.vm.usap_pool_size_min=1
+dalvik.vm.dex2oat-minidebuginfo=true
+dalvik.vm.usap_refill_threshold=1
+dalvik.vm.usap_pool_refill_delay_ms=3000
+dalvik.vm.disable-art-service-dexopt=true
+dalvik.vm.dex2oat-max-image-block-size=524288
+dalvik.vm.dex2oat-resolve-startup-strings=true
+persist.sys.dalvik.vm.lib.2=libart.so
+debug.atrace.tags.enableflags=0
+ro.product.debugfs_restrictions.enabled=true
+ro.twrp.boot=1
+ro.twrp.version=3.7.1_16-OnePlus Turbo6V
+ro.twrp.fastbootd=0
+ro.wifi.channels=
+ro.allow.mock.location=1
+ro.build.selinux=1
+ro.build.version.sdk_full=36.0
+ro.build.version.known_codenames=Base,Base11,Cupcake,Donut,Eclair,Eclair01,EclairMr1,Froyo,Gingerbread,GingerbreadMr1,Honeycomb,HoneycombMr1,HoneycombMr2,IceCreamSandwich,IceCreamSandwichMr1,JellyBean,JellyBeanMr1,JellyBeanMr2,Kitkat,KitkatWatch,Lollipop,LollipopMr1,M,N,NMr1,O,OMr1,P,Q,R,S,Sv2,Tiramisu,UpsideDownCake,VanillaIceCream,Baklava
+ro.build.version.release_or_preview_display=16
+ro.kernel.android.checkjni=1
+ro.kernel.version=6.1
+ro.system.build.version.sdk_full=36.0
+ro.system.product.cpu.abilist=arm64-v8a,armeabi-v7a,armeabi
+ro.system.product.cpu.abilist32=armeabi-v7a,armeabi
+ro.system.product.cpu.abilist64=arm64-v8a
+ro.product.build.version.sdk_full=36.0
+ro.product.locale=en-US
+ro.appsearch.feature.enable_isolated_storage=
+ro.system_ext.build.version.sdk_full=36.0
+ro.postinstall.fstab.prefix=/system
+fbe.contents=aes-256-xts
+fbe.filenames=aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0
+init.svc_debug.no_fatal.zygote=true
+twrp.user.0.decrypt=0
+twrp.user.995.decrypt=0
+twrp.user.996.decrypt=0
+twrp.user.997.decrypt=0
+twrp.user.998.decrypt=0
+twrp.user.999.decrypt=0
+twrp.super.symlinks_created=true
+twrp.crash_counter=0
+twrp.action_complete=0
+fstab.additional=1
+crypto.ready=1
+persist.wm.extensions.enabled=true
+metadata.contents=aes-256-xts
+metadata.filenames=wrappedkey_v0
+keymaster_ver=
+ro.product.build.16k_page.enabled=false
+ro.apex.updatable=true
+ro.boot.slot_suffix=_a
+ro.boot.fstab_suffix=default
+ro.boot.dynamic_partitions=true
+ro.hwui.use_vulkan=
+ro.board.platform=volcano
+ro.build.ab_update=true
+ro.carrier=unknown
+pm.dexopt.ab-ota=speed-profile
+pm.dexopt.shared=speed
+pm.dexopt.cmdline=verify
+pm.dexopt.install=speed-profile
+pm.dexopt.inactive=verify
+pm.dexopt.bg-dexopt=speed-profile
+pm.dexopt.post-boot=verify
+pm.dexopt.first-boot=verify
+pm.dexopt.install-bulk=speed-profile
+pm.dexopt.install-fast=skip
+pm.dexopt.boot-after-ota=verify
+pm.dexopt.install-bulk-secondary=verify
+pm.dexopt.install-bulk-downgraded=verify
+pm.dexopt.boot-after-mainline-update=verify
+pm.dexopt.install-bulk-secondary-downgraded=verify
+sys.usb.ffs.ready=1
+ro.build.fingerprint=oneplus/twrp_OP64D3L1/OP64D3L1:99.87.36/BP2A.250605.031.A2/eng.804179:eng/test-keys
+ro.gsid.image_running=0
+gsid.image_installed=0
+hwservicemanager.disabled=true
+init.svc.logd=running
+init.svc.ttyd=running
+init.svc.charger=running
+init.svc.ueventd=running
+init.svc.recovery=running
+init.svc.keystore2=running
+init.svc.microhttpd=running
+init.svc.touch-aidl=restarting
+init.svc.prepdecrypt=stopped
+init.svc.servicemanager=running
+init.svc.twrp-wifi-init=running
+init.svc.qseecom-service=running
+init.svc.hwservicemanager=running
+init.svc.load-adsp-driver=stopped
+init.svc.vndservicemanager=running
+init.svc.adbd=running
+init.svc.console=running
+init.svc_debug_pid.adbd=692
+init.svc_debug_pid.logd=514
+init.svc_debug_pid.ttyd=552
+init.svc_debug_pid.vendor.oplus.vibrator=532
+init.svc_debug_pid.vendor.boot-qti=533
+init.svc_debug_pid.vendor.qseecomd=662
+init.svc_debug_pid.vendor.keymint-qti=515
+init.svc_debug_pid.vendor.health-default=531
+init.svc_debug_pid.vendor.gatekeeper_default=576
+init.svc_debug_pid.charger=528
+init.svc_debug_pid.console=513
+init.svc_debug_pid.ueventd=503
+init.svc_debug_pid.recovery=529
+init.svc_debug_pid.keystore2=524
+init.svc_debug_pid.microhttpd=550
+init.svc_debug_pid.touch-aidl=1821
+init.svc_debug_pid.prepdecrypt=
+init.svc_debug_pid.servicemanager=521
+init.svc_debug_pid.twrp-wifi-init=527
+init.svc_debug_pid.qseecom-service=522
+init.svc_debug_pid.hwservicemanager=519
+init.svc_debug_pid.load-adsp-driver=
+init.svc_debug_pid.vndservicemanager=523
+keystore.crash_count=0
+log.tag.stats_log=I
+ro.logd.size.stats=64K
+ro.logd.kernel=true
+logd.ready=true
+ro.vendor.build.ab_ota_partitions=boot,my_bigball,my_carrier,my_company,my_engineering,my_heytap,my_manifest,my_preload,my_product,my_region,my_stock,odm,product,system,system_ext,vbmeta_system,vbmeta_vendor,vendor
+ro.product.ab_ota_partitions=boot,my_bigball,my_carrier,my_company,my_engineering,my_heytap,my_manifest,my_preload,my_product,my_region,my_stock,odm,product,system,system_ext,vbmeta_system,vbmeta_vendor,vendor
+ro.cp_system_other_odex=1
+ro.product.page_size=4096
+persist.debug.dalvik.vm.core_platform_api_policy=just-warn
+persist.debug.perfetto.persistent_sysui_tracing_for_bugreport=1
+ro.property_service.version=2
+ro.minui.pixel_format=RGBX_8888
+ro.minui.overscan_percent=0
+ro.recovery.usb.adb.pid=D001
+ro.recovery.usb.vid=18D1
+ro.recovery.usb.fastboot.pid=4EE0
+ro.boot.serialno=3B159S0087200000
+ro.serialno=3B159S0087200000
+servicemanager.ready=true
+service.adb.root=1
+external_storage.casefold.enabled=1
+external_storage.sdcardfs.enabled=0
+ro.sf.lcd_density=560
+ro.surface_flinger.game_default_frame_rate_override=60
+dev.mnt.blk.mnt.vendor.persist=sda2
+dev.mnt.blk.odm=
+dev.mnt.blk.data=sda15
+dev.mnt.blk.data.user.0=sda15
+dev.mnt.blk.cache=sdf3
+dev.mnt.blk.vendor=
+dev.mnt.blk.product=
+dev.mnt.blk.firmware=
+dev.mnt.blk.metadata=sda10
+dev.mnt.blk.my_stock=
+dev.mnt.blk.my_heytap=
+dev.mnt.blk.my_region=
+dev.mnt.blk.my_bigball=
+dev.mnt.blk.my_carrier=
+dev.mnt.blk.my_company=
+dev.mnt.blk.my_preload=
+dev.mnt.blk.my_product=
+dev.mnt.blk.system_ext=
+dev.mnt.blk.my_manifest=
+dev.mnt.blk.system_root=
+dev.mnt.blk.my_engineering=
+dev.mnt.dev.mnt.vendor.persist=sda2
+dev.mnt.dev.odm=
+dev.mnt.dev.data=dm-25
+dev.mnt.dev.data.user.0=dm-25
+dev.mnt.dev.cache=sdf3
+dev.mnt.dev.vendor=
+dev.mnt.dev.product=
+dev.mnt.dev.firmware=
+dev.mnt.dev.metadata=sda10
+dev.mnt.dev.my_stock=
+dev.mnt.dev.my_heytap=
+dev.mnt.dev.my_region=
+dev.mnt.dev.my_bigball=
+dev.mnt.dev.my_carrier=
+dev.mnt.dev.my_company=
+dev.mnt.dev.my_preload=
+dev.mnt.dev.my_product=
+dev.mnt.dev.system_ext=
+dev.mnt.dev.my_manifest=
+dev.mnt.dev.system_root=
+dev.mnt.dev.my_engineering=
+dev.mnt.rootdisk.mnt.vendor.persist=sda
+dev.mnt.rootdisk.odm=
+dev.mnt.rootdisk.data=sda
+dev.mnt.rootdisk.data.user.0=sda
+dev.mnt.rootdisk.cache=sdf
+dev.mnt.rootdisk.vendor=
+dev.mnt.rootdisk.product=
+dev.mnt.rootdisk.firmware=
+dev.mnt.rootdisk.metadata=sda
+dev.mnt.rootdisk.my_stock=
+dev.mnt.rootdisk.my_heytap=
+dev.mnt.rootdisk.my_region=
+dev.mnt.rootdisk.my_bigball=
+dev.mnt.rootdisk.my_carrier=
+dev.mnt.rootdisk.my_company=
+dev.mnt.rootdisk.my_preload=
+dev.mnt.rootdisk.my_product=
+dev.mnt.rootdisk.system_ext=
+dev.mnt.rootdisk.my_manifest=
+dev.mnt.rootdisk.system_root=
+dev.mnt.rootdisk.my_engineering=
+net.bt.name=Android
+persist.sys.usb.config=adb
+persist.sys.disable_rescue=true
+ro.config.ringtone=Ring_Synth_04.ogg
+ro.config.alarm_alert=Alarm_Classic.ogg
+ro.config.notification_sound=OnTheHunt.ogg
+persist.sys.timezone=CST6CDT,M3.2.0,M11.1.0
+tombstoned.max_tombstone_count=50
+persist.traced.enable=1
+sys.usb.state=adb
+sys.usb.config=adb
+sys.usb.configfs=1
+sys.usb.controller=a600000.dwc3
+ro.secure=0
+ro.debuggable=1
+ro.odm.build.id=BP2A.250605.031.A2
+ro.odm.build.tags=test-keys
+ro.odm.build.type=eng
+ro.odm.build.version.sdk=36
+ro.odm.build.version.release=99.87.36
+ro.odm.build.version.sdk_full=36.0
+ro.odm.build.version.release_or_codename=99.87.36
+ro.odm.product.cpu.abilist=arm64-v8a,armeabi-v7a,armeabi
+ro.odm.product.cpu.abilist32=armeabi-v7a,armeabi
+ro.odm.product.cpu.abilist64=arm64-v8a
+init.svc.vendor.oplus.vibrator=running
+init.svc.vendor.boot-qti=running
+init.svc.vendor.qseecomd=running
+init.svc.vendor.keymint-qti=running
+init.svc.vendor.health-default=running
+init.svc.vendor.gatekeeper_default=running
+vendor.sys.listeners.registered=true
+vendor.oplus.touch.daemon.start.times=5
+vendor.touchdaemon.pid=1821
+ro.vendor.build.security_patch=2099-12-31
+ro.virtual_ab.enabled=true
+ro.crypto.metadata.enabled=true
+ro.crypto.fs_crypto_blkdev=/dev/block/mapper/userdata
+ro.crypto.type=file
+ro.crypto.state=encrypted
+
+I:Overriding ro.build.date.utc with value: "0"
+I:Overriding ro.bootimage.build.date.utc with value: "0"
+I:Overriding ro.vendor.build.date.utc with value: "0"
+I:Overriding ro.system.build.date.utc with value: "0"
+I:Overriding ro.system_ext.build.date.utc with value: "0"
+I:Overriding ro.product.build.date.utc with value: "0"
+I:Overriding ro.odm.build.date.utc with value: "0"
+copying '/data/misc/keystore/persistent.sqlite' to '/tmp/misc/keystore/persistent.sqlite'
+I:Is encrypted, do decrypt page first
+I:Switching packages (TWRP)
+I:Set page: 'decrypt'
+I:Set page: 'decrypt_pin'
+I:recv error on uevent
+I:Set overlay: 'select_language'
+I:Set overlay: ''
+I:operation_start: 'Set Language'
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/zh_CN.xml' directly
+parsing languageFile
+parsing languageFile done
+I:Translating partition display names
+I:Backup folder set to '/data/media/TWRP/BACKUPS/serialno'
+I:operation_end - status=0
+I:Loading package: TWRP (/data/media/TWRP/theme/ui.zip)
+I:Loading zip theme
+I:Failed to load package '/data/media/TWRP/theme/ui.zip'.
+I:Attempting to reload stock theme...
+I:Loading package: TWRP (/twres/ui.xml)
+I:Load XML directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/zh_TW.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/zh_CN.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/uk.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/tr.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/sv.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/sl.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/sk.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/ru.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/pt_PT.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/pt_BR.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/pl.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/nl.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/lk.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/ja.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/it.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/id.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/hu.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/fr.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/es.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/en.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/el.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/de.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/cz.xml' directly
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/en.xml' directly
+parsing languageFile
+parsing languageFile done
+I:PageManager::LoadFileToBuffer loading filename: '/twres/ui.xml' directly
+I:Checking resolution...
+I:Scaling theme width 1.177778x and height 1.443750x, offsets x: 0 y: 0 w: 0 h: 0
+I:Loading resources...
+I:Failed to load image from indeterminate013, error -1
+I:Loading variables...
+I:Loading mouse cursor...
+I:Loading pages...
+I:Including file: /twres/portrait.xml...
+I:PageManager::LoadFileToBuffer loading filename: '/twres/portrait.xml' directly
+I:Loading resources...
+I:Loading variables...
+I:Loading mouse cursor...
+I:Loading pages...
+I:Loading page main
+I:Loading page main2
+I:Loading page install
+I:Loading page flash_confirm
+I:Loading page flash_zip
+I:Loading page flash_done
+I:Loading page flash_sleep_and_reboot
+I:Loading page flashimage_confirm
+I:Loading page clear_vars
+I:Loading page reboot_system_routine
+I:Loading page confirm_action
+I:Loading page action_page
+I:Loading page singleaction_page
+I:Loading page action_complete
+I:Loading page filecheck
+I:Loading page rebootcheck
+I:Loading page wipe
+I:Loading page advancedwipe
+I:Loading page formatdata
+I:Loading page formatdata_confirm
+I:Loading page wlan_password
+I:Loading page checkpartitionlist
+I:Loading page partitionoptions
+I:Loading page refreshfilesystem
+I:Loading page selectfilesystem
+I:Loading page backup
+I:Loading page multiuser_warning
+I:Loading page backup_options
+I:Loading page backupname1
+I:Loading page backupname2
+I:Loading page backupencryption
+I:Loading page backupencryption2
+I:Loading page checkbackuppassword
+I:Loading page backup_run
+I:Loading page restore
+I:Unable to open '/data/media/TWRP/BACKUPS/serialno'
+I:Loading page restore_force
+I:Unable to open '/data/media/TWRP/BACKUPS'
+I:Loading page restore_read
+I:Loading page restore_decrypt
+I:Loading page try_restore_decrypt
+I:Loading page restore_select
+I:Loading page renamebackup
+I:Loading page restore_run
+I:Loading page mount
+I:Loading page usb_mount
+I:Loading page usb_umount
+I:Loading page system_readonly_check
+I:Loading page fastbootreboot
+I:Loading page reboot
+I:Loading page installapp
+I:Loading page system_readonly
+I:Loading page settings
+I:Loading page settings_timezone
+I:Loading page settings_screen
+I:Loading page settings_vibration
+I:Loading page settings_language
+I:Loading page copylog
+I:Loading page extension
+I:Loading page wlan
+I:Loading page advanced
+I:Loading page partsdcardsel
+I:Loading page partsdcardcheck
+I:Loading page partsdcard
+I:Loading page repackselect
+I:Loading page repackconfirm
+I:Loading page lock
+I:Loading page filemanagerlist
+I:Loading page filemanageroptions
+I:Loading page choosedestinationfolder
+I:Loading page filemanagerrenamefile
+I:Loading page filemanagerrenamefolder
+I:Loading page filemanagerchmod
+I:Loading page filemanagerconfirm
+I:Loading page filemanageraction
+I:Loading page decrypt
+I:Loading page decrypt_pattern
+I:Loading page decrypt_pin
+I:Loading page trydecrypt
+I:Loading page canceldecrypt
+I:Loading page terminalcommand
+I:Loading page fastboot
+I:Loading page sideload
+I:Loading page fixcontexts
+I:Loading page slideout
+I:Loading page select_storage
+I:Loading page select_wlan
+I:Loading page select_language
+I:Loading page decrypt_users
+I:Loading page changeTwrpFolder
+I:Loading page restore_keymaster
+I:Set page: 'decrypt_pin'
+I:Switching packages (TWRP)
+I:Loading language 'zh_CN'
+I:PageManager::LoadFileToBuffer loading filename: '/twres/languages/zh_CN.xml' directly
+parsing languageFile
+parsing languageFile done
+I:Translating partition display names
+I:Backup folder set to '/data/media/TWRP/BACKUPS/serialno'
+I:Set page: 'trydecrypt'
+I:operation_start: 'Decrypt'
+尝试为用户 0 解密 FBE…
+Attempting to decrypt user
+Handle is 'aa59fcda8f4969c1'
+password type: PIN
+Using synthetic password method
+Attempting to decrypt user's synthetic password
+fscrypt::GetPassword_Token
+Is_Weaver
+using secdis to decrypt spblob
+GateKeeper status ok
+Attempting to unwrap synthetic password blob
+spblob v2 / v3
+Attempting to unlock user storage
+Attempting to prepare user storage
+SELinux: Loaded file context from:
+		/plat_file_contexts
+		/system_ext_file_contexts
+		/product_file_contexts
+		/vendor_file_contexts
+		/odm_file_contexts
+User 0 Decrypted Successfully!
+Free_Return
+用户 0 解密成功
+I:User 995 is not decrypted.
+Data 分区已成功解密
+I:Backup folder set to '/data/media/0/TWRP/BACKUPS/serialno'
+I:New storage path after decryption: /data/media/0
+正在更新分区详情…
+I:checking for twrp app
+I:Can't probe device /dev/block/sda1
+I:Unable to mount '/usb_otg'
+I:Actual block device: '/dev/block/sda1', current file system: 'vfat'
+I:Data backup size is 49978MB, free: 166473MB.
+…完成
+/data | /dev/block/mapper/userdata | Size: 223839MB Used: 49978MB Free: 166473MB Backup Size: 49978MB
+   Flags: Can_Be_Mounted Can_Be_Wiped Can_Be_Backed_Up Wipe_During_Factory_Reset Wipe_Available_in_GUI IsPresent Can_Be_Encrypted Is_Encrypted Is_Decrypted Has_Data_Media Can_Encrypt_Backup Use_Userdata_Encryption Is_Storage Is_Settings_Storage 
+   Symlink_Path: /data/media/0
+   Symlink_Mount_Point: /sdcard
+   Primary_Block_Device: /dev/block/sda15
+   Decrypted_Block_Device: /dev/block/mapper/userdata
+   Display_Name: Data
+   Storage_Name: 内部存储空间
+   Backup_Path: /data
+   Backup_Name: data
+   Backup_Display_Name: Data（不包含内部存储空间）
+   Storage_Path: /data/media/0
+   Current_File_System: f2fs
+   Fstab_File_System: f2fs
+   Backup_Method: files
+   Mount_Flags: 1030, Mount_Options: discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt
+   MTP_Storage_ID: 65539
+   Metadata Key Directory: /metadata/vold/metadata_encryption
+
+I:No recovery folder found. Using default folder.
+I:Backup folder set to '/data/media/0/TWRP/BACKUPS/serialno'
+tw_get_context got selinux context: u:object_r:media_rw_data_file:s0, file: /data/media/0
+I:Got default contexts and file mode for storage files.
+I:Decrypt adopted storage starting
+I:PageManager::LoadFileToBuffer loading filename: '/data/system/storage.xml' directly
+I:No /data/system/storage.xml for adopted storage
+I:Set page: 'main'
+I:Set page: 'clear_vars'
+I:Set page: 'main2'
+I:operation_end - status=0
+I:Set page: 'main'
+I:Set page: 'clear_vars'
+I:Set page: 'main2'
+SELinux contexts loaded from /file_contexts
+完整 SELinux 支持。
+I:No recovery folder found. Using default folder.
+I:Switching packages (TWRP)
+
+
+Partition Logs:
+/system_root | /dev/block/dm-0 | Size: 948MB Used: 948MB Free: 0MB Backup Size: 948MB
+   Flags: Can_Be_Mounted IsPresent SlotSelect Mount_Read_Only Is_Super 
+   Primary_Block_Device: /dev/block/dm-0
+   Display_Name: System
+   Storage_Name: System
+   Backup_Path: /system_root
+   Backup_Name: system
+   Backup_Display_Name: System
+   Storage_Path: /system_root
+   Current_File_System: erofs
+   Fstab_File_System: ext4
+   Backup_Method: files
+
+/system_ext | /dev/block/dm-1 | Size: 852MB Used: 852MB Free: 0MB Backup Size: 852MB
+   Flags: Can_Be_Mounted IsPresent SlotSelect Mount_Read_Only Is_Super 
+   Primary_Block_Device: /dev/block/dm-1
+   Display_Name: System_EXT
+   Storage_Name: System_EXT
+   Backup_Path: /system_ext
+   Backup_Name: System_EXT
+   Backup_Display_Name: System_EXT
+   Storage_Path: /system_ext
+   Current_File_System: erofs
+   Fstab_File_System: ext4
+   Backup_Method: files
+
+/product | /dev/block/dm-3 | Size: 8MB Used: 8MB Free: 0MB Backup Size: 8MB
+   Flags: Can_Be_Mounted IsPresent SlotSelect Mount_Read_Only Is_Super 
+   Primary_Block_Device: /dev/block/dm-3
+   Display_Name: Product
+   Storage_Name: Product
+   Backup_Path: /product
+   Backup_Name: Product
+   Backup_Display_Name: Product
+   Storage_Path: /product
+   Current_File_System: erofs
+   Fstab_File_System: ext4
+   Backup_Method: files
+
+/vendor | /dev/block/dm-2 | Size: 517MB Used: 517MB Free: 0MB Backup Size: 517MB
+   Flags: Can_Be_Mounted IsPresent SlotSelect Mount_Read_Only Is_Super 
+   Primary_Block_Device: /dev/block/dm-2
+   Display_Name: Vendor
+   Storage_Name: Vendor
+   Backup_Path: /vendor
+   Backup_Name: vendor
+   Backup_Display_Name: Vendor
+   Storage_Path: /vendor
+   Current_File_System: erofs
+   Fstab_File_System: ext4
+   Backup_Method: files
+
+/odm | /dev/block/dm-5 | Size: 1721MB Used: 1721MB Free: 0MB Backup Size: 1721MB
+   Flags: Can_Be_Mounted IsPresent SlotSelect Mount_Read_Only Is_Super 
+   Primary_Block_Device: /dev/block/dm-5
+   Display_Name: ODM
+   Storage_Name: ODM
+   Backup_Path: /odm
+   Backup_Name: ODM
+   Backup_Display_Name: ODM
+   Storage_Path: /odm
+   Current_File_System: erofs
+   Fstab_File_System: ext4
+   Backup_Method: files
+
+/my_product | /dev/block/dm-4 | Size: 926MB Used: 926MB Free: 0MB Backup Size: 926MB
+   Flags: Can_Be_Mounted IsPresent SlotSelect Mount_Read_Only Is_Super 
+   Primary_Block_Device: /dev/block/dm-4
+   Display_Name: my_product
+   Storage_Name: my_product
+   Backup_Path: /my_product
+   Backup_Name: my_product
+   Backup_Display_Name: my_product
+   Storage_Path: /my_product
+   Current_File_System: erofs
+   Fstab_File_System: ext4
+   Backup_Method: files
+
+/my_company | /dev/block/dm-15 | Size: 0MB Used: 0MB Free: 0MB Backup Size: 0MB
+   Flags: Can_Be_Mounted IsPresent SlotSelect Mount_Read_Only Is_Super 
+   Primary_Block_Device: /dev/block/dm-15
+   Display_Name: my_company
+   Storage_Name: my_company
+   Backup_Path: /my_company
+   Backup_Name: my_company
+   Backup_Display_Name: my_company
+   Storage_Path: /my_company
+   Current_File_System: erofs
+   Fstab_File_System: ext4
+   Backup_Method: files
+
+/my_carrier | /dev/block/dm-13 | Size: 0MB Used: 0MB Free: 0MB Backup Size: 0MB
+   Flags: Can_Be_Mounted IsPresent SlotSelect Mount_Read_Only Is_Super 
+   Primary_Block_Device: /dev/block/dm-13
+   Display_Name: my_carrier
+   Storage_Name: my_carrier
+   Backup_Path: /my_carrier
+   Backup_Name: my_carrier
+   Backup_Display_Name: my_carrier
+   Storage_Path: /my_carrier
+   Current_File_System: erofs
+   Fstab_File_System: ext4
+   Backup_Method: files
+
+/my_region | /dev/block/dm-14 | Size: 6MB Used: 6MB Free: 0MB Backup Size: 6MB
+   Flags: Can_Be_Mounted IsPresent SlotSelect Mount_Read_Only Is_Super 
+   Primary_Block_Device: /dev/block/dm-14
+   Display_Name: my_region
+   Storage_Name: my_region
+   Backup_Path: /my_region
+   Backup_Name: my_region
+   Backup_Display_Name: my_region
+   Storage_Path: /my_region
+   Current_File_System: erofs
+   Fstab_File_System: ext4
+   Backup_Method: files
+
+/my_bigball | /dev/block/dm-17 | Size: 0MB Used: 0MB Free: 0MB Backup Size: 0MB
+   Flags: Can_Be_Mounted IsPresent SlotSelect Mount_Read_Only Is_Super 
+   Primary_Block_Device: /dev/block/dm-17
+   Display_Name: my_bigball
+   Storage_Name: my_bigball
+   Backup_Path: /my_bigball
+   Backup_Name: my_bigball
+   Backup_Display_Name: my_bigball
+   Storage_Path: /my_bigball
+   Current_File_System: erofs
+   Fstab_File_System: ext4
+   Backup_Method: files
+
+/my_heytap | /dev/block/dm-12 | Size: 0MB Used: 0MB Free: 0MB Backup Size: 0MB
+   Flags: Can_Be_Mounted IsPresent SlotSelect Mount_Read_Only Is_Super 
+   Primary_Block_Device: /dev/block/dm-12
+   Display_Name: my_heytap
+   Storage_Name: my_heytap
+   Backup_Path: /my_heytap
+   Backup_Name: my_heytap
+   Backup_Display_Name: my_heytap
+   Storage_Path: /my_heytap
+   Current_File_System: erofs
+   Fstab_File_System: ext4
+   Backup_Method: files
+
+/my_stock | /dev/block/dm-11 | Size: 4200MB Used: 4200MB Free: 0MB Backup Size: 4200MB
+   Flags: Can_Be_Mounted IsPresent SlotSelect Mount_Read_Only Is_Super 
+   Primary_Block_Device: /dev/block/dm-11
+   Display_Name: my_stock
+   Storage_Name: my_stock
+   Backup_Path: /my_stock
+   Backup_Name: my_stock
+   Backup_Display_Name: my_stock
+   Storage_Path: /my_stock
+   Current_File_System: erofs
+   Fstab_File_System: ext4
+   Backup_Method: files
+
+/my_preload | /dev/block/dm-16 | Size: 2148MB Used: 2148MB Free: 0MB Backup Size: 2148MB
+   Flags: Can_Be_Mounted IsPresent SlotSelect Mount_Read_Only Is_Super 
+   Primary_Block_Device: /dev/block/dm-16
+   Display_Name: my_preload
+   Storage_Name: my_preload
+   Backup_Path: /my_preload
+   Backup_Name: my_preload
+   Backup_Display_Name: my_preload
+   Storage_Path: /my_preload
+   Current_File_System: erofs
+   Fstab_File_System: ext4
+   Backup_Method: files
+
+/my_manifest | /dev/block/dm-18 | Size: 0MB Used: 0MB Free: 0MB Backup Size: 0MB
+   Flags: Can_Be_Mounted IsPresent SlotSelect Mount_Read_Only Is_Super 
+   Primary_Block_Device: /dev/block/dm-18
+   Display_Name: my_manifest
+   Storage_Name: my_manifest
+   Backup_Path: /my_manifest
+   Backup_Name: my_manifest
+   Backup_Display_Name: my_manifest
+   Storage_Path: /my_manifest
+   Current_File_System: erofs
+   Fstab_File_System: ext4
+   Backup_Method: files
+
+/my_engineering | /dev/block/dm-6 | Size: 0MB Used: 0MB Free: 0MB Backup Size: 0MB
+   Flags: Can_Be_Mounted IsPresent SlotSelect Mount_Read_Only Is_Super 
+   Primary_Block_Device: /dev/block/dm-6
+   Display_Name: my_engineering
+   Storage_Name: my_engineering
+   Backup_Path: /my_engineering
+   Backup_Name: my_engineering
+   Backup_Display_Name: my_engineering
+   Storage_Path: /my_engineering
+   Current_File_System: erofs
+   Fstab_File_System: ext4
+   Backup_Method: files
+
+/cache | /dev/block/sdf3 | Size: 223MB Used: 28MB Free: 195MB Backup Size: 28MB
+   Flags: Can_Be_Mounted Can_Be_Wiped Can_Be_Backed_Up Wipe_During_Factory_Reset Wipe_Available_in_GUI IsPresent 
+   Primary_Block_Device: /dev/block/sdf3
+   Display_Name: Cache
+   Storage_Name: Cache
+   Backup_Path: /cache
+   Backup_Name: cache
+   Backup_Display_Name: Cache
+   Storage_Path: /cache
+   Current_File_System: ext4
+   Fstab_File_System: ext4
+   Backup_Method: files
+   Mount_Flags: 1030, Mount_Options: barrier=1
+
+/external_sd |  | Size: 0MB Used: 0MB Free: 0MB Backup Size: 0MB
+   Flags: Can_Be_Mounted Can_Be_Wiped Wipe_Available_in_GUI Removable Is_Storage 
+   Primary_Block_Device: /dev/block/mmcblk0p1
+   Alternate_Block_Device: /dev/block/mmcblk1p1          flags=display="Micro SDcard";storage;wipeingui;removable
+
+   Display_Name: Micro SDCard
+   Storage_Name: Micro SDCard
+   Backup_Path: /external_sd
+   Backup_Name: external_sd
+   Backup_Display_Name: Data（不包含内部存储空间）
+   Storage_Path: /external_sd
+   Current_File_System: vfat
+   Fstab_File_System: vfat
+   Backup_Method: files
+   Mount_Flags: 6, Mount_Options: 
+   MTP_Storage_ID: 65537
+
+/usb_otg | /dev/block/sda1 | Size: 0MB Used: 0MB Free: 0MB Backup Size: 0MB
+   Flags: Can_Be_Mounted Can_Be_Wiped Wipe_Available_in_GUI Removable IsPresent Is_Storage 
+   Primary_Block_Device: /dev/block/sda1
+   Alternate_Block_Device: /dev/block/sdg1               flags=display="USB OTG";storage;wipeingui;removable
+
+   Display_Name: USB OTG
+   Storage_Name: usb_otg
+   Backup_Path: /usb_otg
+   Backup_Name: usb_otg
+   Backup_Display_Name: usb_otg
+   Storage_Path: /usb_otg
+   Current_File_System: vfat
+   Fstab_File_System: vfat
+   Backup_Method: files
+   Mount_Flags: 6, Mount_Options: 
+   MTP_Storage_ID: 65538
+
+/boot | /dev/block/bootdevice/by-name/boot_a | Size: 96MB
+   Flags: Can_Be_Backed_Up IsPresent Can_Flash_Img SlotSelect 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/boot
+   Display_Name: Boot
+   Storage_Name: boot
+   Backup_Path: /boot
+   Backup_Name: boot
+   Backup_Display_Name: Boot
+   Storage_Path: /boot
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/recovery | /dev/block/bootdevice/by-name/recovery_a | Size: 100MB
+   Flags: Can_Be_Backed_Up IsPresent Can_Flash_Img SlotSelect 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/recovery
+   Display_Name: Recovery
+   Storage_Name: recovery
+   Backup_Path: /recovery
+   Backup_Name: recovery
+   Backup_Display_Name: Recovery
+   Storage_Path: /recovery
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/misc | /dev/block/sda3 | Size: 1MB
+   Flags: IsPresent 
+   Primary_Block_Device: /dev/block/sda3
+   Display_Name: misc
+   Storage_Name: misc
+   Backup_Path: /misc
+   Backup_Name: misc
+   Backup_Display_Name: misc
+   Storage_Path: /misc
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/aboot |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/aboot
+   Display_Name: aboot
+   Storage_Name: aboot
+   Backup_Path: /aboot
+   Backup_Name: aboot
+   Backup_Display_Name: aboot
+   Storage_Path: /aboot
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/abootbak |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/abootbak
+   Display_Name: abootbak
+   Storage_Name: abootbak
+   Backup_Path: /abootbak
+   Backup_Name: abootbak
+   Backup_Display_Name: abootbak
+   Storage_Path: /abootbak
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/sbl1 |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/sbl1
+   Display_Name: sbl1
+   Storage_Name: sbl1
+   Backup_Path: /sbl1
+   Backup_Name: sbl1
+   Backup_Display_Name: sbl1
+   Storage_Path: /sbl1
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/sbl1bak |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/sbl1bak
+   Display_Name: sbl1bak
+   Storage_Name: sbl1bak
+   Backup_Path: /sbl1bak
+   Backup_Name: sbl1bak
+   Backup_Display_Name: sbl1bak
+   Storage_Path: /sbl1bak
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/rpm |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/rpm
+   Display_Name: rpm
+   Storage_Name: rpm
+   Backup_Path: /rpm
+   Backup_Name: rpm
+   Backup_Display_Name: rpm
+   Storage_Path: /rpm
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/rpmbak |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/rpmbak
+   Display_Name: rpmbak
+   Storage_Name: rpmbak
+   Backup_Path: /rpmbak
+   Backup_Name: rpmbak
+   Backup_Display_Name: rpmbak
+   Storage_Path: /rpmbak
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/tz |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/tz
+   Display_Name: tz
+   Storage_Name: tz
+   Backup_Path: /tz
+   Backup_Name: tz
+   Backup_Display_Name: tz
+   Storage_Path: /tz
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/tzbak |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/tzbak
+   Display_Name: tzbak
+   Storage_Name: tzbak
+   Backup_Path: /tzbak
+   Backup_Name: tzbak
+   Backup_Display_Name: tzbak
+   Storage_Path: /tzbak
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/modemst1 |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/modem_st1
+   Display_Name: modemst1
+   Storage_Name: modemst1
+   Backup_Path: /modemst1
+   Backup_Name: modemst1
+   Backup_Display_Name: modemst1
+   Storage_Path: /modemst1
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/modemst2 |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/modem_st2
+   Display_Name: modemst2
+   Storage_Name: modemst2
+   Backup_Path: /modemst2
+   Backup_Name: modemst2
+   Backup_Display_Name: modemst2
+   Storage_Path: /modemst2
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/static_nv_bk |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/oppostanvbk
+   Display_Name: static_nv_bk
+   Storage_Name: static_nv_bk
+   Backup_Path: /static_nv_bk
+   Backup_Name: static_nv_bk
+   Backup_Display_Name: static_nv_bk
+   Storage_Path: /static_nv_bk
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/oppodycnvbk |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/oppodycnvbk
+   Display_Name: oppodycnvbk
+   Storage_Name: oppodycnvbk
+   Backup_Path: /oppodycnvbk
+   Backup_Name: oppodycnvbk
+   Backup_Display_Name: oppodycnvbk
+   Storage_Path: /oppodycnvbk
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/logo |  | Size: 0MB
+   Flags: Can_Be_Backed_Up Can_Flash_Img SlotSelect 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/logo
+   Display_Name: Boot Logo
+   Storage_Name: logo
+   Backup_Path: /logo
+   Backup_Name: logo
+   Backup_Display_Name: logo
+   Storage_Path: /logo
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/reserve4 |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/reserve4
+   Display_Name: reserve4
+   Storage_Name: reserve4
+   Backup_Path: /reserve4
+   Backup_Name: reserve4
+   Backup_Display_Name: reserve4
+   Storage_Path: /reserve4
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/dsp | /dev/block/bootdevice/by-name/dsp_a | Size: 64MB
+   Flags: Can_Be_Backed_Up IsPresent SlotSelect 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/dsp
+   Display_Name: Dsp
+   Storage_Name: dsp
+   Backup_Path: /dsp
+   Backup_Name: dsp
+   Backup_Display_Name: dsp
+   Storage_Path: /dsp
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/DDR |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/DDR
+   Display_Name: DDR
+   Storage_Name: DDR
+   Backup_Path: /DDR
+   Backup_Name: DDR
+   Backup_Display_Name: DDR
+   Storage_Path: /DDR
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/devcfg |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/devcfg
+   Display_Name: devcfg
+   Storage_Name: devcfg
+   Backup_Path: /devcfg
+   Backup_Name: devcfg
+   Backup_Display_Name: devcfg
+   Storage_Path: /devcfg
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/mdtp |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/mdtp
+   Display_Name: mdtp
+   Storage_Name: mdtp
+   Backup_Path: /mdtp
+   Backup_Name: mdtp
+   Backup_Display_Name: mdtp
+   Storage_Path: /mdtp
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/cmnlib |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/cmnlib
+   Display_Name: cmnlib
+   Storage_Name: cmnlib
+   Backup_Path: /cmnlib
+   Backup_Name: cmnlib
+   Backup_Display_Name: cmnlib
+   Storage_Path: /cmnlib
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/cmnlibbak |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/cmnlibbak
+   Display_Name: cmnlibbak
+   Storage_Name: cmnlibbak
+   Backup_Path: /cmnlibbak
+   Backup_Name: cmnlibbak
+   Backup_Display_Name: cmnlibbak
+   Storage_Path: /cmnlibbak
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/keymaster | /dev/block/bootdevice/by-name/keymaster_a | Size: 0MB
+   Flags: IsPresent SlotSelect 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/keymaster
+   Display_Name: keymaster
+   Storage_Name: keymaster
+   Backup_Path: /keymaster
+   Backup_Name: keymaster
+   Backup_Display_Name: keymaster
+   Storage_Path: /keymaster
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/keymasterbak |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/keymasterbak
+   Display_Name: keymasterbak
+   Storage_Name: keymasterbak
+   Backup_Path: /keymasterbak
+   Backup_Name: keymasterbak
+   Backup_Display_Name: keymasterbak
+   Storage_Path: /keymasterbak
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/apdp | /dev/block/sdb5 | Size: 0MB
+   Flags: IsPresent 
+   Primary_Block_Device: /dev/block/sdb5
+   Display_Name: apdp
+   Storage_Name: apdp
+   Backup_Path: /apdp
+   Backup_Name: apdp
+   Backup_Display_Name: apdp
+   Storage_Path: /apdp
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/devinfo | /dev/block/sde64 | Size: 0MB
+   Flags: IsPresent 
+   Primary_Block_Device: /dev/block/sde64
+   Display_Name: devinfo
+   Storage_Name: devinfo
+   Backup_Path: /devinfo
+   Backup_Name: devinfo
+   Backup_Display_Name: devinfo
+   Storage_Path: /devinfo
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/opporeserve | /dev/block/sdf3 | Size: 256MB
+   Flags: IsPresent 
+   Primary_Block_Device: /dev/block/sdf3
+   Display_Name: opporeserve
+   Storage_Name: opporeserve
+   Backup_Path: /opporeserve
+   Backup_Name: opporeserve
+   Backup_Display_Name: opporeserve
+   Storage_Path: /opporeserve
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+   Mount_Flags: 1030, Mount_Options: seclabel,data=ordered
+
+/abl |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/abl
+   Display_Name: abl
+   Storage_Name: abl
+   Backup_Path: /abl
+   Backup_Name: abl
+   Backup_Display_Name: abl
+   Storage_Path: /abl
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/ablbak |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/ablbak
+   Display_Name: ablbak
+   Storage_Name: ablbak
+   Backup_Path: /ablbak
+   Backup_Name: ablbak
+   Backup_Display_Name: ablbak
+   Storage_Path: /ablbak
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/xbl |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/xbl
+   Display_Name: xbl
+   Storage_Name: xbl
+   Backup_Path: /xbl
+   Backup_Name: xbl
+   Backup_Display_Name: xbl
+   Storage_Path: /xbl
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/xblbak |  | Size: 0MB
+   Flags: 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/xblbak
+   Display_Name: xblbak
+   Storage_Name: xblbak
+   Backup_Path: /xblbak
+   Backup_Name: xblbak
+   Backup_Display_Name: xblbak
+   Storage_Path: /xblbak
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/bluetooth | /dev/block/bootdevice/by-name/bluetooth_a | Size: 8MB
+   Flags: Can_Be_Backed_Up IsPresent SlotSelect 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/bluetooth
+   Display_Name: Bluetooth
+   Storage_Name: Bluetooth
+   Backup_Path: /bluetooth
+   Backup_Name: bluetooth
+   Backup_Display_Name: Bluetooth
+   Storage_Path: /bluetooth
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/bt_firmware | /dev/block/bootdevice/by-name/bluetooth_a | Size: 63MB Used: 0MB Free: 63MB Backup Size: 0MB
+   Flags: Can_Be_Mounted Can_Be_Wiped IsPresent SlotSelect 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/bluetooth
+   Display_Name: Bluetooth
+   Storage_Name: Bluetooth
+   Backup_Path: /bt_firmware
+   Backup_Name: bt_firmware
+   Backup_Display_Name: Bluetooth
+   Storage_Path: /bt_firmware
+   Current_File_System: vfat
+   Fstab_File_System: ext4
+   Backup_Method: files
+
+/dtbo | /dev/block/bootdevice/by-name/dtbo_a | Size: 24MB
+   Flags: Can_Be_Backed_Up IsPresent Can_Flash_Img SlotSelect 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/dtbo
+   Display_Name: Dtbo
+   Storage_Name: Dtbo
+   Backup_Path: /dtbo
+   Backup_Name: dtbo
+   Backup_Display_Name: Dtbo
+   Storage_Path: /dtbo
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/efs1 | /dev/block/sdf9 | Size: 4MB
+   Flags: Can_Be_Backed_Up Has_SubPartition IsPresent 
+   Primary_Block_Device: /dev/block/sdf9
+   Display_Name: EFS
+   Storage_Name: EFS
+   Backup_Path: /efs1
+   Backup_Name: efs1
+   Backup_Display_Name: EFS
+   Storage_Path: /efs1
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/efs2 | /dev/block/sdf10 | Size: 4MB
+   Flags: Can_Be_Backed_Up Is_SubPartition IsPresent 
+   SubPartition_Of: /efs1
+   Primary_Block_Device: /dev/block/sdf10
+   Display_Name: efs2
+   Storage_Name: efs2
+   Backup_Path: /efs2
+   Backup_Name: efs2
+   Backup_Display_Name: efs2
+   Storage_Path: /efs2
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/firmware | /dev/block/bootdevice/by-name/modem_a | Size: 349MB Used: 202MB Free: 147MB Backup Size: 202MB
+   Flags: Can_Be_Mounted Can_Be_Wiped IsPresent Mount_To_Decrypt SlotSelect Mount_Read_Only 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/modem
+   Display_Name: Firmware
+   Storage_Name: Firmware
+   Backup_Path: /firmware
+   Backup_Name: firmware
+   Backup_Display_Name: Firmware
+   Storage_Path: /firmware
+   Current_File_System: vfat
+   Fstab_File_System: ext4
+   Backup_Method: files
+   Mount_Flags: 0, Mount_Options: shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0
+
+/fsg | /dev/block/sdf11 | Size: 4MB
+   Flags: Can_Be_Backed_Up IsPresent SlotSelect 
+   Primary_Block_Device: /dev/block/sdf11
+   Display_Name: Fsg
+   Storage_Name: Fsg
+   Backup_Path: /fsg
+   Backup_Name: fsg
+   Backup_Display_Name: Fsg
+   Storage_Path: /fsg
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/modem | /dev/block/bootdevice/by-name/modem_a | Size: 350MB
+   Flags: Can_Be_Backed_Up IsPresent SlotSelect 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/modem
+   Display_Name: Modem
+   Storage_Name: Modem
+   Backup_Path: /modem
+   Backup_Name: modem
+   Backup_Display_Name: Modem
+   Storage_Path: /modem
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/vbmeta | /dev/block/bootdevice/by-name/vbmeta_a | Size: 0MB
+   Flags: Can_Be_Backed_Up IsPresent Can_Flash_Img SlotSelect 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/vbmeta
+   Display_Name: VBMeta
+   Storage_Name: VBMeta
+   Backup_Path: /vbmeta
+   Backup_Name: vbmeta
+   Backup_Display_Name: VBMeta
+   Storage_Path: /vbmeta
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/vbmeta_system | /dev/block/bootdevice/by-name/vbmeta_system_a | Size: 0MB
+   Flags: Can_Be_Backed_Up IsPresent Can_Flash_Img SlotSelect 
+   Primary_Block_Device: /dev/block/bootdevice/by-name/vbmeta_system
+   Display_Name: VBMeta System
+   Storage_Name: VBMeta System
+   Backup_Path: /vbmeta_system
+   Backup_Name: vbmeta_system
+   Backup_Display_Name: VBMeta System
+   Storage_Path: /vbmeta_system
+   Current_File_System: emmc
+   Fstab_File_System: emmc
+   Backup_Method: dd
+
+/metadata | /dev/block/sda10 | Size: 62MB Used: 35MB Free: 26MB Backup Size: 35MB
+   Flags: Can_Be_Mounted Can_Be_Wiped Wipe_Available_in_GUI IsPresent 
+   Primary_Block_Device: /dev/block/sda10
+   Display_Name: Metadata
+   Storage_Name: Metadata
+   Backup_Path: /metadata
+   Backup_Name: metadata
+   Backup_Display_Name: Metadata
+   Storage_Path: /metadata
+   Current_File_System: f2fs
+   Fstab_File_System: f2fs
+   Backup_Method: files
+   Mount_Flags: 1030, Mount_Options: discard
+
+/data | /dev/block/mapper/userdata | Size: 223839MB Used: 49978MB Free: 166473MB Backup Size: 49978MB
+   Flags: Can_Be_Mounted Can_Be_Wiped Can_Be_Backed_Up Wipe_During_Factory_Reset Wipe_Available_in_GUI IsPresent Can_Be_Encrypted Is_Encrypted Is_Decrypted Has_Data_Media Can_Encrypt_Backup Use_Userdata_Encryption Is_Storage Is_Settings_Storage 
+   Symlink_Path: /data/media/0
+   Symlink_Mount_Point: /sdcard
+   Primary_Block_Device: /dev/block/sda15
+   Decrypted_Block_Device: /dev/block/mapper/userdata
+   Display_Name: Data
+   Storage_Name: 内部存储空间
+   Backup_Path: /data
+   Backup_Name: data
+   Backup_Display_Name: Data（不包含内部存储空间）
+   Storage_Path: /data/media/0
+   Current_File_System: f2fs
+   Fstab_File_System: f2fs
+   Backup_Method: files
+   Mount_Flags: 1030, Mount_Options: discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt
+   MTP_Storage_ID: 65539
+   Metadata Key Directory: /metadata/vold/metadata_encryption
+
+/super | /dev/block/by-name/super | Size: 15808MB
+   Flags: Can_Be_Backed_Up IsPresent Can_Flash_Img 
+   Alternate_Block_Device: /dev/block/by-name/super
+   Display_Name: super
+   Backup_Path: /super
+   Backup_Name: super
+   Backup_Display_Name: Super (system system_ext product vendor)
+   Current_File_System: emmc
+   Backup_Method: dd
+
+I:No recovery folder found. Using default folder.
+I:Starting MTP
+I:Cannot find file /sys/class/android_usb/android0/idVendor
+I:Cannot find file /sys/class/android_usb/android0/idProduct
+I:[MTP] Starting MTP
+I:Can't probe device /dev/block/sda1
+I:Unable to mount '/usb_otg'
+I:Actual block device: '/dev/block/sda1', current file system: 'vfat'
+I:sending message to add 65539 '/data/media/0' '内部存储空间'
+I:Message sent, add storage ID: 65539 '/data/media/0'
+MTP 已启用
+I:Starting Adb Backup FIFO
+I:checking for twrp app
+I:App not installed
+I:Switching packages (TWRP)
+I:Set page: 'main'
+I:Set page: 'clear_vars'
+I:Set page: 'main2'
+I:[MTP] created new mtpserver object
+I:[MTP] mtppipe add storage 65539 '/data/media/0'

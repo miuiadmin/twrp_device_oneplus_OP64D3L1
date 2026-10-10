@@ -168,7 +168,8 @@ TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_LIBRESETPROP := true
 
-# Local enhancements retained from the stable tree.
+# Local enhancements retained from the stable tree. Keep these independent
+# from the proven QCOM crypto service ordering below.
 TW_FRAMERATE := 60
 TW_ENABLE_ALL_PARTITION_TOOLS := true
 TW_INCLUDE_7ZA := true
@@ -205,6 +206,8 @@ TW_INCLUDE_FUSE_NTFS  := true
 # Props
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
+# Crypto: use the proven prepdecrypt -> persist -> crypto.ready -> QSEE flow.
+# Do not restore the failed v17 device-tree keystore2 interface override.
 # Crypto
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true

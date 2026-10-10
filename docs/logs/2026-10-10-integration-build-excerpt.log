@@ -1,0 +1,18 @@
+# 2026-10-10 integration build excerpt
+
+## v1 clean build failure: task_profiles scheduling race
+5375-[ 91% 5114/5567 50s remaining] Install: out/target/product/OP64D3L1/recovery/root/twrp_ramdisk-timestamp
+5376-FAILED: out/target/product/OP64D3L1/recovery/root/twrp_ramdisk-timestamp
+5377-/bin/bash -c "(rm -f out/target/product/OP64D3L1/recovery/root/twrp_ramdisk-timestamp ) && (cp out/target/product/OP64D3L1/obj/FAKE/twrp_ramdisk_intermediates/twrp_ramdisk-timestamp out/target/product/OP64D3L1/recovery/root/twrp_ramdisk-timestamp ) && (mkdir -p out/target/product/OP64D3L1/recovery/root/sbin; ln -sf /system/bin/sh out/target/product/OP64D3L1/recovery/root/sbin/sh && mkdir -p out/target/product/OP64D3L1/recovery/root/system/etc/selinux/ && mkdir -p out/target/product/OP64D3L1/recovery/root/vendor/etc/selinux/ && mkdir -p out/target/product/OP64D3L1/recovery/root/system/etc/task_profiles/ && cp out/target/product/OP64D3L1/system/etc/selinux/plat_service_contexts out/target/product/OP64D3L1/recovery/root/system/etc/selinux/plat_service_contexts && cp out/target/product/OP64D3L1/system/etc/selinux/plat_hwservice_contexts out/target/product/OP64D3L1/recovery/root/system/etc/selinux/plat_hwservice_contexts && cp out/target/product/OP64D3L1/vendor/etc/selinux/vndservice_contexts out/target/product/OP64D3L1/recovery/root/vendor/etc/selinux/vndservice_contexts && cp out/target/product/OP64D3L1/vendor/etc/selinux/vendor_hwservice_contexts out/target/product/OP64D3L1/recovery/root/vendor/etc/selinux/vendor_hwservice_contexts && cp out/target/product/OP64D3L1/system/etc/selinux/plat_keystore2_key_contexts out/target/product/OP64D3L1/recovery/root/system/etc/selinux/plat_keystore2_key_contexts && cp out/target/product/OP64D3L1/system/etc/task_profiles.json out/target/product/OP64D3L1/recovery/root/system/etc/task_profiles/task_profiles_30.json && cp out/target/product/OP64D3L1/system/etc/mke2fs.conf out/target/product/OP64D3L1/recovery/root/system/etc/mke2fs.conf )"
+5378:cp: bad 'out/target/product/OP64D3L1/system/etc/task_profiles.json': No such file or directory
+5379-[ 91% 5115/5567 50s remaining] Copy symbols with mapping: out/target/product/OP64D3L1/symbols/recovery/root/system/lib64/libadbconnection_server.so
+5380-[ 91% 5116/5567 50s remaining] target Prebuilt: 7za (out/target/product/OP64D3L1/obj/EXECUTABLES/7za_intermediates/7za)
+5381-[ 91% 5117/5567 50s remaining] target Prebuilt: libadb_protos.recovery (out/target/product/OP64D3L1/obj/SHARED_LIBRARIES/libadb_protos.recovery_intermediates/libadb_protos.recovery.so)
+5382-[ 91% 5118/5567 50s remaining] target Prebuilt: libadb_sysdeps.recovery (out/target/product/OP64D3L1/obj/SHARED_LIBRARIES/libadb_sysdeps.recovery_intermediates/libadb_sysdeps.recovery.so)
+
+## v2 clean build success and artifact
+#### build completed successfully (04:14 (mm:ss)) ####
+#### build completed successfully (03:06 (mm:ss)) ####
+ec390fcfb5fd44e761ebb5f34df813d2c2c007b6b26c5b631a2cdc57cc4c1527  /work/oppo_80417957/android/twrp-op64d3l1/rtyu-integration-build-20261010/TWRP-3.7.1-16-OP64D3L1-2026-10-10-1619-rtyu-integration-v2-clean.img
+SIZE=104857600
+DEST=/work/oppo_80417957/android/twrp-op64d3l1/rtyu-integration-build-20261010/TWRP-3.7.1-16-OP64D3L1-2026-10-10-1619-rtyu-integration-v2-clean.img

@@ -1,0 +1,4 @@
+This device tree includes software and prebuilt recovery components from
+rtyutechstudio/android_device_OnePlus_OP64D3L1-twrp, integrated at upstream
+commit 6b35fd1cb827e2f74c7e1831f16ddcf9af49b204. See LICENSE for the upstream
+license text.
