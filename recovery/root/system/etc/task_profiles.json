@@ -11,6 +11,11 @@
       "File": "foreground/cpus"
     },
     {
+      "Name": "HighCapacityWICPUs",
+      "Controller": "cpuset",
+      "File": "foreground_window/cpus"
+    },
+    {
       "Name": "MaxCapacityCPUs",
       "Controller": "cpuset",
       "File": "top-app/cpus"
@@ -19,12 +24,6 @@
       "Name": "AudioAppCapacityCPUs",
       "Controller": "cpuset",
       "File": "audio-app/cpus"
-    },
-
-    {
-      "Name": "DisplayCapacityCPUs",
-      "Controller": "cpuset",
-      "File": "display/cpus"
     },
     {
       "Name": "MemStats",
@@ -94,25 +93,11 @@
       "File": "cgroup.freeze"
     },
     {
-      "Name": "BfqWeight",
-      "Controller": "io",
-      "File": "blkio.bfq.weight",
-      "FileV2": "io.bfq.weight"
-    },
-    {
-      "Name": "CfqGroupIdle",
-      "Controller": "io",
-      "File": "blkio.group_idle",
-      "FileV2": "io.group_idle"
-    },
-    {
-      "Name": "CfqWeight",
-      "Controller": "io",
-      "File": "blkio.weight",
-      "FileV2": "io.weight"
+      "Name": "CgroupProcs",
+      "Controller": "cgroup2",
+      "File": "cgroup.procs"
     }
   ],
-
   "Profiles": [
     {
       "Name": "HighEnergySaving",
@@ -193,6 +178,19 @@
       ]
     },
     {
+      "Name": "HighPerformanceWI",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "foreground_window"
+          }
+        }
+      ]
+    },
+    {
       "Name": "MaxPerformance",
       "Actions": [
         {
@@ -214,6 +212,19 @@
           {
             "Controller": "cpu",
             "Path": "rt"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "RealTimeInputScheduling",
+      "Actions": [
+        {
+          "Name": "SetSchedulerPolicy",
+          "Params":
+          {
+            "Policy": "SCHED_FIFO",
+            "Priority": "2"
           }
         }
       ]
@@ -426,6 +437,19 @@
       ]
     },
     {
+      "Name": "VMCompilationPerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "system"
+          }
+        }
+      ]
+    },
+    {
       "Name": "CpuPolicySpread",
       "Actions": [
         {
@@ -451,7 +475,6 @@
         }
       ]
     },
-
     {
       "Name": "VrKernelCapacity",
       "Actions": [
@@ -543,7 +566,6 @@
         }
       ]
     },
-
     {
       "Name": "ProcessCapacityLow",
       "Actions": [
@@ -579,6 +601,19 @@
           {
             "Controller": "cpuset",
             "Path": "foreground"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "ProcessCapacityHighWI",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "foreground_window"
           }
         }
       ]
@@ -650,7 +685,6 @@
         }
       ]
     },
-
     {
       "Name": "CameraServiceCapacity",
       "Actions": [
@@ -677,20 +711,6 @@
         }
       ]
     },
-    {
-      "Name": "DisplayCapacity",
-      "Actions" : [
-        {
-          "Name" : "JoinCgroup",
-          "Params" :
-          {
-            "Controller": "cpuset",
-            "Path": "display"
-          }
-        }
-      ]
-    },
-
     {
       "Name": "BlkIoLBackground",
       "Actions": [
@@ -807,7 +827,6 @@
         }
       ]
     },
-
     {
       "Name": "LowIoPriority",
       "Actions": [
@@ -968,7 +987,6 @@
         }
       ]
     },
-
     {
       "Name": "TimerSlackHigh",
       "Actions": [
@@ -976,7 +994,7 @@
           "Name": "SetTimerSlack",
           "Params":
           {
-            "Slack": "5000000"
+            "Slack": "40000000"
           }
         }
       ]
@@ -993,7 +1011,6 @@
         }
       ]
     },
-
     {
       "Name": "SFMainPolicy",
       "Actions": [
@@ -1047,6 +1064,97 @@
       ]
     },
     {
+      "Name": "CpuctlServiceForeground",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "service-foreground"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CpuctlNormalForeground",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "normal-foreground"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CpuctlRestrictedForeground",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "restricted-foreground"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CpuctlLBackground",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "l-background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CpuctlHBackground",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "h-background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CpuctlRestrictedBackground",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "restricted-background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CpuctlSystemUI",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "systemui"
+          }
+        }
+      ]
+    },
+    {
       "Name": "PerfBoost",
       "Actions": [
         {
@@ -1072,7 +1180,6 @@
         }
       ]
     },
-
     {
       "Name": "LowMemoryUsage",
       "Actions": [
@@ -1081,7 +1188,7 @@
           "Params":
           {
             "Name": "MemSoftLimit",
-            "Value": "16MB"
+            "Value": "16M"
           }
         },
         {
@@ -1090,7 +1197,6 @@
           {
             "Name": "MemSwappiness",
             "Value": "150"
-
           }
         }
       ]
@@ -1103,7 +1209,7 @@
           "Params":
           {
             "Name": "MemSoftLimit",
-            "Value": "512MB"
+            "Value": "512M"
           }
         },
         {
@@ -1128,9 +1234,20 @@
           }
         }
       ]
+    },
+    {
+      "Name": "CpuctlKilling",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params": {
+            "Controller": "cpu",
+            "Path": "killing"
+          }
+        }
+      ]
     }
   ],
-
   "AggregateProfiles": [
     {
       "Name": "SCHED_SP_DEFAULT",
@@ -1145,6 +1262,10 @@
       "Profiles": [ "HighPerformance", "HighIoPriority", "TimerSlackNormal" ]
     },
     {
+      "Name": "SCHED_SP_FOREGROUND_WINDOW",
+      "Profiles": [ "HighPerformanceWI", "HighIoPriority", "TimerSlackNormal" ]
+    },
+    {
       "Name": "SCHED_SP_TOP_APP",
       "Profiles": [ "MaxPerformance", "MaxIoPriority", "TimerSlackNormal" ]
     },
@@ -1153,12 +1274,12 @@
       "Profiles": [ "ServicePerformance", "LowIoPriority", "TimerSlackNormal" ]
     },
     {
-      "Name": "SCHED_SP_RT_APP",
-      "Profiles": [ "RealtimePerformance", "MaxIoPriority", "TimerSlackNormal" ]
+      "Name": "SCHED_SP_COMPUTE",
+      "Profiles": [ "HighPerformance", "ProcessCapacityHigh", "LowIoPriority", "TimerSlackNormal" ]
     },
     {
-      "Name": "SCHED_SP_DISPLAY",
-      "Profiles": [ "HighPerformance", "HighIoPriority", "TimerSlackNormal" ]
+      "Name": "SCHED_SP_RT_APP",
+      "Profiles": [ "RealtimePerformance", "MaxIoPriority", "TimerSlackNormal" ]
     },
     {
       "Name": "SCHED_SP_MEM",
@@ -1217,16 +1338,16 @@
       "Profiles": [ "HighPerformance", "ProcessCapacityHigh", "HighIoPriority", "TimerSlackNormal" ]
     },
     {
+      "Name": "CPUSET_SP_FOREGROUND_WINDOW",
+      "Profiles": [ "HighPerformanceWI", "ProcessCapacityHighWI", "HighIoPriority", "TimerSlackNormal" ]
+    },
+    {
       "Name": "CPUSET_SP_TOP_APP",
       "Profiles": [ "MaxPerformance", "ProcessCapacityMax", "MaxIoPriority", "TimerSlackNormal" ]
     },
     {
       "Name": "CPUSET_SP_SYSTEM",
       "Profiles": [ "ServiceCapacityLow", "TimerSlackNormal" ]
-    },
-    {
-      "Name": "CPUSET_SP_DISPLAY",
-      "Profiles": [ "HighEnergySaving", "ProcessCapacityLow", "LowIoPriority", "TimerSlackHigh" ]
     },
     {
       "Name": "CPUSET_SP_RESTRICTED",
@@ -1245,16 +1366,52 @@
       "Profiles": [ "ServiceCapacityLow", "LowIoPriority", "HighEnergySaving" ]
     },
     {
+      "Name": "InputPolicy",
+      "Profiles": [ "RealTimeInputScheduling", "MaxPerformance", "ProcessCapacityMax", "TimerSlackNormal" ]
+    },
+    {
       "Name": "CPUSET_SP_LBACKGROUND",
-      "Profiles": [ "CpuSetLBackground", "BlkIoLBackground"]
+      "Profiles": [ "CpuSetLBackground", "BlkIoLBackground", "CpuctlLBackground"]
     },
     {
       "Name": "CPUSET_SP_HBACKGROUND",
-      "Profiles": [ "CpuSetHBackground", "BlkIoHBackground"]
+      "Profiles": [ "CpuSetHBackground", "BlkIoHBackground", "CpuctlHBackground"]
     },
     {
       "Name": "CPUSET_SP_CAMERA_BACKGROUND",
       "Profiles": [ "CpuSetCameraBackground", "CpuctlCameraBackground", "LowIoPriority", "TimerSlackHigh" ]
+    },
+    {
+      "Name": "SCHED_SP_SERVICE_FOREGROUND",
+      "Profiles": [ "CpuctlServiceForeground", "HighIoPriority", "TimerSlackHigh" ]
+    },
+    {
+      "Name": "SCHED_SP_NORMAL_FOREGROUND",
+      "Profiles": [ "CpuctlNormalForeground", "HighIoPriority", "TimerSlackHigh" ]
+    },
+    {
+      "Name": "SCHED_SP_RESTRICTED_FOREGROUND",
+      "Profiles": [ "CpuctlRestrictedForeground", "HighIoPriority", "TimerSlackHigh" ]
+    },
+    {
+      "Name": "SCHED_SP_LBACKGROUND",
+      "Profiles": [ "CpuctlLBackground", "BlkIoLBackground" ]
+    },
+    {
+      "Name": "SCHED_SP_HBACKGROUND",
+      "Profiles": [ "CpuctlHBackground", "BlkIoHBackground" ]
+    },
+    {
+      "Name": "SCHED_SP_RESTRICTED_BACKGROUND",
+      "Profiles": [ "CpuctlRestrictedBackground", "BlkIoHBackground" ]
+    },
+    {
+      "Name": "SCHED_SP_SYSTEMUI",
+      "Profiles": [ "CpuctlSystemUI", "HighIoPriority", "TimerSlackNormal"]
+    },
+    {
+      "Name": "SCHED_SP_KILLING",
+      "Profiles": [ "CpuctlKilling", "ProcessCapacityHigh", "HighIoPriority", "TimerSlackNormal" ]
     }
   ]
 }

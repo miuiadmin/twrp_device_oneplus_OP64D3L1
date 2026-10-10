@@ -1,20 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest version="8.0" type="device" target-level="202404">
+<!--
+    Input:
+        device/qcom/volcano/manifest_volcano.xml
+-->
+<manifest version="7.0" type="device" target-level="8">
+	
     <hal format="aidl">
         <name>android.hardware.gatekeeper</name>
-        <version>1</version>
         <fqname>IGatekeeper/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.keymaster</name>
-        <transport>hwbinder</transport>
-        <version>4.1</version>
-        <interface>
-            <name>IKeymasterDevice</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
+
+
     <sepolicy>
-        <version>202404</version>
+        <version>34.0</version>
     </sepolicy>
 </manifest>

@@ -1,58 +1,80 @@
+# Copyright (C) 2026 The TWRP Open Source Project
 #
-# Copyright (C) 2025 The Android Open Source Project
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
 #
-# SPDX-License-Identifier: Apache-2.0
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
-# Configure base.mk
-$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+LOCAL_PATH := device/oneplus/OP64D3L1
 
-# Configure core_64_bit_only.mk
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
-
-# Configure virtual_ab compression.mk
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression_with_xor.mk)
-
-# Configure emulated_storage.mk
-$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
-# Configure twrp common.mk
-$(call inherit-product, vendor/twrp/config/common.mk)
-
-# Shipping/vendor API level observed from stock PLY110_16.0.8.300(CN01).
-BOARD_SHIPPING_API_LEVEL    := 34
-PRODUCT_SHIPPING_API_LEVEL  := 34
-PRODUCT_TARGET_VNDK_VERSION := 34
-
-# Dynamic partitions
+# Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-PRODUCT_BUILD_SUPER_PARTITION  := false
 
-# Kernel
-PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS   := false
-PRODUCT_ENABLE_UFFD_GC                          := true
+# Virtual A/B
+ENABLE_VIRTUAL_AB := true
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
-# Recovery root files
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/recovery.fstab:recovery/root/system/etc/recovery.fstab \
-    $(DEVICE_PATH)/recovery/root/system/etc/twrp.flags:recovery/root/system/etc/twrp.flags \
-    $(DEVICE_PATH)/recovery/root/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
-    $(DEVICE_PATH)/recovery/root/init.recovery.usb.rc:recovery/root/init.recovery.usb.rc \
-    $(DEVICE_PATH)/recovery/root/ueventd.qcom.rc:recovery/root/ueventd.qcom.rc \
-    $(DEVICE_PATH)/recovery/root/system/bin/twrp-touch-hal-init.sh:recovery/root/system/bin/twrp-touch-hal-init.sh \
-    $(DEVICE_PATH)/recovery/root/vendor/manifest.xml:recovery/root/vendor/manifest.xml
+# Update Engine & Update Verifier 
+PRODUCT_PACKAGES += \
+    update_engine \
+    update_verifier \
+    update_engine_sideload
 
-# USB in recovery
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.recovery.usb.vid=18D1 \
-    ro.recovery.usb.adb.pid=D001 \
-    ro.recovery.usb.fastboot.pid=4EE0 \
-    persist.sys.usb.config=adb
+PRODUCT_PACKAGES += \
+    lpflash \
+    lpmake \
+    lpunpack
+
+# A/B
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_system=true \
+    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
+    FILESYSTEM_TYPE_system=ext4 \
+    POSTINSTALL_OPTIONAL_system=true
+
+PRODUCT_PACKAGES += \
+    otapreopt_script \
+    cppreopts.sh
+
+# Boot control HAL
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-impl \
+    android.hardware.boot@1.2-impl.recovery \
+    android.hardware.boot@1.2-service
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctrl
+
+
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
+# Fastbootd
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.1-impl-mock \
+    fastbootd
+
+
+# Additional Libraries
+#TARGET_RECOVERY_DEVICE_MODULES += \
+#    libkeymaster4 \
+#    libkeymaster41 \
+#    libpuresoftkeymasterdevice
+
+#RECOVERY_LIBRARY_SOURCE_FILES += \
+#    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
+#    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
+#    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
 
 # OTA certs
 PRODUCT_EXTRA_RECOVERY_KEYS += \
-    $(DEVICE_PATH)/security/local_OTA \
-    $(DEVICE_PATH)/security/special_OTA
-
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
+	$(LOCAL_PATH)/security/local_OTA \
+	$(LOCAL_PATH)/security/special_OTA
