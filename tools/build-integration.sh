@@ -9,7 +9,6 @@ DEFAULT_SRC=$(cd -- "$SCRIPT_DIR/../../../.." && pwd)
 TWRP_SRC=${TWRP_SRC:-$DEFAULT_SRC}
 ARTIFACT_DIR=${ARTIFACT_DIR:-$(cd -- "$TWRP_SRC/.." && pwd)/rtyu-integration-build}
 JOBS=${JOBS:-32}
-CLEAN=${CLEAN:-1}
 BUILD_SUFFIX=${BUILD_SUFFIX:-v2}
 STAMP=$(date +%Y-%m-%d-%H%M)
 
@@ -36,17 +35,17 @@ fi
 mkdir -p "$ARTIFACT_DIR"
 cd "$TWRP_SRC"
 
-if [[ "$CLEAN" == 1 ]]; then
-    echo "Cleaning target product output"
-    # Keep the clean operation portable across Linux build hosts.
-    python3 - <<PY
+# Always remove the target product output. Incremental restaging can leave a
+# directory/symlink shape conflict under recovery/root/odm/firmware and can
+# also mix stale ramdisk files from a previous device-tree experiment.
+echo "Cleaning target product output"
+python3 - <<PY
 from pathlib import Path
 import shutil
 base = Path("$TWRP_SRC") / "out/target/product/OP64D3L1"
 if base.exists():
     shutil.rmtree(base)
 PY
-fi
 
 # Enter the Android build environment after path and option validation.
 set +u

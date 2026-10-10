@@ -138,3 +138,16 @@ adb shell 'grep -i touch /tmp/recovery.log'
 - 不修改 userdata 分区表。
 - 只刷 recovery 分区。
 - 保留本地和 Release 回滚镜像。
+
+## 12. 增量构建的 odm/firmware 形态冲突
+
+尝试用 `CLEAN=0` 做构建脚本烟测时失败：
+
+```text
+could not make way for new symlink: root/odm/firmware
+cannot delete non-empty directory: root/odm/firmware
+```
+
+原因：旧 target output 中 `recovery/root/odm/firmware` 的目录/符号链接形态与当前设备树不一致，rsync restage 无法安全替换。
+
+处理：构建脚本始终删除 `out/target/product/OP64D3L1`。这同时降低 stale ramdisk 和 v17 覆盖残留风险。
