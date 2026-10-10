@@ -1,0 +1,45 @@
+# 2026-10-10 build-integration.sh clean smoke
+
+## Failed attempt 1: two script instances
+
+A second integration script was started while the first clean build still held
+the Android build graph. The second instance deleted target output after its
+Android lock probe timed out and caused the first build to race:
+
+```text
+Tried to lock out/.lock, but timed out polling every 1s until 10s
+cp: bad 'out/target/product/OP64D3L1/system/etc/task_profiles.json': No such file or directory
+```
+
+The script now takes a separate exclusive
+`out/.op64d3l1-build-integration.lock` before deleting any target output.
+
+Lock regression test while a build was active:
+
+```text
+RC=2
+ERROR: another OP64D3L1 integration build is using this source tree
+```
+
+## Failed attempt 2: gate scanned historical documentation
+
+A recursive v17 interface grep matched this research archive after the image
+build had completed. The gate now checks the staged target output and requires
+the file to exist.
+
+## Passing clean run
+
+```text
+Local GUI input-latency patch already applied
+Cleaning target product output
+#### build completed successfully (03:54 (mm:ss)) ####
+#### build completed successfully (03:03 (mm:ss)) ####
+aba6b6ce6eea7706d4ddb0eee60312a23b42b4998ec653b814f111813ae6f448  /work/oppo_80417957/android/twrp-op64d3l1/rtyu-integration-build/TWRP-3.7.1-16-OP64D3L1-2026-10-10-1722-rtyu-integration-tool-smoke.img
+SIZE=104857600
+DEST=/work/oppo_80417957/android/twrp-op64d3l1/rtyu-integration-build/TWRP-3.7.1-16-OP64D3L1-2026-10-10-1722-rtyu-integration-tool-smoke.img
+```
+
+Passing the script means the required staged files, image size, and staged
+`keystore2.rc` gate all completed before export. This smoke image was not
+flashed; the publicly recommended image remains the already device-verified v2
+artifact with SHA-256 `ec390fcfb5fd44e761ebb5f34df813d2c2c007b6b26c5b631a2cdc57cc4c1527`.
