@@ -14,6 +14,19 @@ SIZE   104857600
 https://github.com/miuiadmin/twrp_device_oneplus_OP64D3L1/releases/tag/v0.2.0-rtyu-integration
 ```
 
+## v0.0.1 归档清理
+
+`v0.0.1` 不再提供早期 TWRP 实验 image，包括 v17-v23 解密失败版本、旧 `recovery.img` 和对应 sidecar/checksum。仓库保留 `docs/v0.0.1-assets.sha256` 作为历史审计记录。
+
+仍在 `v0.0.1` 保留的回滚/非 TWRP 资产：
+
+- 官方 `boot.img`、`vendor_boot.img`、`init_boot.img`、`dtbo.img`
+- 官方 `vbmeta*.img`
+- 原有 AK3 kernel archive
+- 重新生成的 `SHA256SUMS` 和 `SUMMARY.md`
+
+当前唯一可下载的 TWRP 入口是 `v0.2.0-rtyu-integration`。
+
 ## 发布原则
 
 1. 100MB 镜像只放 GitHub Release asset，不进 git 历史。

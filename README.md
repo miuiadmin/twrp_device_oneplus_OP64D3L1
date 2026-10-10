@@ -30,6 +30,10 @@ SIZE   104857600
 
 Release: [v0.2.0-rtyu-integration](https://github.com/miuiadmin/twrp_device_oneplus_OP64D3L1/releases/tag/v0.2.0-rtyu-integration)
 
+Old v17-v23 experiment images are documented for audit history but are no longer
+published as downloadable Release assets. The only recommended TWRP download is
+the verified v2 image above.
+
 ## Documentation
 
 The full research, adaptation, algorithm, build, validation, pitfall, and

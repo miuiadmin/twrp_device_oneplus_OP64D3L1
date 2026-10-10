@@ -23,6 +23,8 @@
 | [rtyu-integration-v2.md](rtyu-integration-v2.md) | v2 集成版验证报告 |
 | [data-decryption-notes.md](data-decryption-notes.md) | 早期解密实验原始结论，保留作历史记录 |
 | [logs/README.md](logs/README.md) | 关键日志索引和摘录说明 |
+| [release-notes/v0.2.0-rtyu-integration.md](release-notes/v0.2.0-rtyu-integration.md) | 当前推荐镜像的发布说明 |
+| [release-notes/v0.0.1-archive.md](release-notes/v0.0.1-archive.md) | 旧实验资产清理后的归档说明 |
 
 ## 快速入口
 

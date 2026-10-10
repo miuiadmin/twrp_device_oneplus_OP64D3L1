@@ -168,3 +168,15 @@ cp: bad 'out/target/product/OP64D3L1/system/etc/task_profiles.json': No such fil
 - 同一 source tree 同时只允许一个 integration build。
 - 预构建后立即断言 `task_profiles.json` 已生成。
 - 失败时先查是否有残留构建进程和双实例，再修改源码。
+
+## 14. 发布门禁 grep 误扫历史文档
+
+构建脚本曾用 `grep -R` 在整个设备树中查找 v17 `keystore2.rc` interface 覆盖。完整研发文档为了保留踩坑记录也包含这行文本，导致镜像已完成构建后被文档内容误判为失败。
+
+处理：门禁只检查实际打包源文件：
+
+```text
+recovery/root/system/etc/init/keystore2.rc
+```
+
+原则：安全门禁必须指向真实输入文件，历史文档不能参与 release 判定。

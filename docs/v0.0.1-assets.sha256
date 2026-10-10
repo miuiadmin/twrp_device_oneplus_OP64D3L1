@@ -1,3 +1,6 @@
+# Historical v0.0.1 asset digests.
+# Failed/obsolete TWRP images were removed from the GitHub Release on 2026-10-10.
+# These digests remain as research/audit history; do not flash these experiment builds.
 be9203aaf04235383bff2995a3df8df06addb45925c48c3b42d01233b6d7082c  TWRP-3.7.1-16-OP64D3L1-2026-07-07-1049-data-decrypt-v23-late-keystore-stock-osver.img
 52b78d8272952697c87aabe1e07e20ff41a0cdf9243217ccfe6f10f71f1807db  TWRP-3.7.1-16-OP64D3L1-2026-07-07-1045-data-decrypt-v22-stock-osver-patchlevel.img
 d3f82bc53b62a839620b3737773a23ec55fe41619c951adf98a7055d6fd4f041  TWRP-3.7.1-16-OP64D3L1-2026-07-07-1042-data-decrypt-v21-additional-fstab.img
